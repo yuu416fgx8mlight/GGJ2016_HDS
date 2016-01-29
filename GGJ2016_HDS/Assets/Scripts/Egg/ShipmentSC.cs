@@ -3,9 +3,10 @@ using System.Collections;
 
 public class ShipmentSC : MonoBehaviour {
 	public Camera _setCamera;
-	public GameObject miniChara=null;
-	public GameObject InstantPosition=null;
-
+	public GameObject miniChara;
+	public GameObject InstantPosition;
+	private GameObject Ganerate;
+	public GameObject Egg;
 	//Margin
 	float margin = 1f; //マージン(画面外に出てどれくらい離れたら消えるか)を指定
 	float negativeMargin;
@@ -13,6 +14,9 @@ public class ShipmentSC : MonoBehaviour {
 
 	void Start ()
 	{
+		_setCamera = GetComponent<Camera> ();
+		InstantPosition = GameObject.Find ("House");
+		Ganerate = GameObject.Find ("GaneratePosition");
 		if (_setCamera == null) {
 			_setCamera = Camera.main;
 		}
@@ -28,6 +32,7 @@ public class ShipmentSC : MonoBehaviour {
 		if (this.isOutOfScreen()) {
 			if (miniChara != null) 
 				Instantiate (miniChara, InstantPosition.transform.position, miniChara.transform.rotation);
+			Instantiate (Egg, Ganerate.transform.position,Quaternion.identity);
 			Destroy (gameObject);
 
 		}
