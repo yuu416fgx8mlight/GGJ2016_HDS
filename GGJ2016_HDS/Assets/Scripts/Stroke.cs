@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Stroke : MonoBehaviour {
 
-	public GameObject StrokeHeart;
-
 	private Vector3 MousePosition;
 	private Vector3 ScreenToWorldPointPosition;
 
@@ -15,16 +13,15 @@ public class Stroke : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		MousePosition = Input.mousePosition;
-		MousePosition.z = 10f;
-
-		ScreenToWorldPointPosition = Camera.main.ScreenToWorldPoint (MousePosition);
-		gameObject.transform.position = ScreenToWorldPointPosition;
-		/*if (Input.GetMouseButton (0)) {
-			Vector3 MousePosition;
-c
+		//押している間エフェクトがついてくる
+		if (Input.GetMouseButton (0)) {
+			MousePosition = Input.mousePosition;
 			MousePosition.z = 10f;
-			Instantiate (StrokeHeart, MousePosition,Quaternion.identity);
-		}*/
+			ScreenToWorldPointPosition = Camera.main.ScreenToWorldPoint (MousePosition);
+			this.transform.position = ScreenToWorldPointPosition;
+		} else {
+			//なんか止められないのでゴリ押し
+			this.transform.position = new Vector3(1000,0,0);
+		}
 	}
 }
