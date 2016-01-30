@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+[System.Serializable]
 public class User{
-    public List<Character> Character = new List<Character>();
+    [SerializeField]
+    public List<Character> characters = new List<Character>();
     public int gold;
     public User(List<Character> c,int gold)
     {
-        Character = c;
+        characters = c;
         this.gold = gold;
     }
     public void LoadUser(List<Character> c,int gold)
     {
-        Character = c;
+        characters = c;
         this.gold = gold;
     }
 }
