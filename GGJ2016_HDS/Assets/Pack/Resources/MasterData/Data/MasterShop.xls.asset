@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f655206185ef3554fbc7be74b043cf3f, type: 3}
+  m_Name: MasterShop.xls
+  m_EditorClassIdentifier: 
+  list:
+  - id: 0
+    name: e89781
+    subscripsion: e89781e381a7e38199e38082
+    gold: 1000
+  - id: 1
+    name: e5baa7e5b883e59ba3
+    subscripsion: e5baa7e5b883e59ba3e381a7e38199e38082
+    gold: 5000
+  - id: 2
+    name: e7bebde6af9b
+    subscripsion: e6af9be381a7e38199e38082
+    gold: 10000
+  - id: 3
+    name: efbca9efbca8e38392e383bce382bfe383bc
+    subscripsion: e38182e381a3e3819fe3818be38184e381a7e38199e38082
+    gold: 50000

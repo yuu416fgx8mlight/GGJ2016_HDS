@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f655206185ef3554fbc7be74b043cf3f, type: 3}
+  m_Name: MasterCharacter.xls
+  m_EditorClassIdentifier: 
+  list:
+  - id: 0
+    name: e7949fe58db5
+    subscripsion: e8aabfe79086e381abe4bdbfe38186e7949fe58db5e381a7e38199e38082
+    gold: 1
+  - id: 1
+    name: e381b2e38288e38193
+    subscripsion: e3818ae7a5ade3828ae381abe587bae5b195e38195e3828ce381a6e381bee38199e38082
+    gold: 20
+  - id: 2
+    name: e9b68f
+    subscripsion: e38397e383ace3839fe382a2e383a0e38395e382a1e3839fe38381e382adefbc81efbc81
+    gold: 190
+  - id: 3
+    name: e38286e381a7e58db5
+    subscripsion: e6b8a9e38281e3819fe38193e381a8e381a7e3818ae38184e38197e3819de38186e381abe381a7e3818de3819fe38082
+    gold: 0
