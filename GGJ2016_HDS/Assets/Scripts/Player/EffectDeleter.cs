@@ -12,9 +12,15 @@ public class EffectDeleter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		StartCoroutine ("DestroyFrag");
 		//エフェクトの生存確認
-		if (!GetComponent<ParticleSystem>().IsAlive ()) {
+		/*if (!GetComponent<ParticleSystem> ().IsAlive ()) {
 			Destroy (gameObject);
-		}
+		}*/
+	}
+
+	public IEnumerator DestroyFrag(){
+		yield return new WaitForSeconds (1f);
+		Destroy (gameObject);
 	}
 }

@@ -202,7 +202,7 @@ GameObject:
   - 4: {fileID: 238337904}
   - 114: {fileID: 238337903}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MoneyTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +227,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 238337902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.043611407, y: 0.01164943, z: 0.07516152}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - 4: {fileID: 812360365}
   - 114: {fileID: 812360364}
   m_Layer: 0
-  m_Name: ClickTest
+  m_Name: PeckTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c63d5d83c80c44a8bd1150c02e28294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TouchEffect: {fileID: 104188, guid: f26b2bff0b2c34a19a27af4039e11071, type: 2}
+  TouchEffect: {fileID: 154866, guid: f26b2bff0b2c34a19a27af4039e11071, type: 2}
 --- !u!4 &812360365
 Transform:
   m_ObjectHideFlags: 0
@@ -310,6 +310,10 @@ Prefab:
     - target: {fileID: 488042, guid: 77201aec90dfc4d0abed4758c750c103, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 119482, guid: 77201aec90dfc4d0abed4758c750c103, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77201aec90dfc4d0abed4758c750c103, type: 2}
