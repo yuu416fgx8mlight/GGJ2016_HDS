@@ -13,6 +13,10 @@ public class EquipmentGrid : MonoBehaviour {
     private Dictionary<EquipmentType, List<MasterShop.param>> m_equpiment = new Dictionary<EquipmentType, List<MasterShop.param>>();
     private EquipmentGridType nowtype;
     private List<GameObject> nowcontent = new List<GameObject>();
+    private string[] typeRes =
+    {
+        "tutuku","Light","Mat","Mat"
+    };
     void Start () {
         nowtype = EquipmentGridType.Category;
         m_content = transform.FindChild("Mask/ScrollView/Content").gameObject;
@@ -46,6 +50,12 @@ public class EquipmentGrid : MonoBehaviour {
                 GameObject g = Instantiate(ResourceManager.Get.GetPrefab("EquipmentNode"));
                 g.GetComponent<Button>().onClick.AddListener(() => { g.GetComponent<EquipmentNode>().NodeClick(type, this,null); });
                 g.GetComponent<EquipmentNode>().type = (EquipmentType)i;
+                g.transform.GetComponent<Image>().sprite = ResourceManager.Get.GetTexture(typeRes[(int)i] + "_0");
+                SpriteState state = g.transform.GetComponent<Button>().spriteState;
+                state.highlightedSprite = ResourceManager.Get.GetTexture(typeRes[(int)i] + "_1");
+                state.pressedSprite = ResourceManager.Get.GetTexture(typeRes[(int)i] + "_1");
+                state.disabledSprite = ResourceManager.Get.GetTexture(typeRes[(int)i] + "_0");
+                g.transform.GetComponent<Button>().spriteState = state;
                 g.transform.SetParent(m_content.transform, false);
                 nowcontent.Add(g);
             }
@@ -58,6 +68,12 @@ public class EquipmentGrid : MonoBehaviour {
                 ChangeGrid(EquipmentGridType.Category, EquipmentType.None);
                 nowtype = EquipmentGridType.Category;
             });
+            returnbutton.transform.GetComponent<Image>().sprite = ResourceManager.Get.GetTexture("back_0");
+            SpriteState returnstate = returnbutton.transform.GetComponent<Button>().spriteState;
+            returnstate.highlightedSprite = ResourceManager.Get.GetTexture("back_1");
+            returnstate.pressedSprite = ResourceManager.Get.GetTexture("back_1");
+            returnstate.disabledSprite = ResourceManager.Get.GetTexture("back_0");
+            returnbutton.transform.GetComponent<Button>().spriteState = returnstate;
             returnbutton.transform.SetParent(m_content.transform, false);
 
             nowcontent.Add(returnbutton);
@@ -67,6 +83,13 @@ public class EquipmentGrid : MonoBehaviour {
                 GameObject g = Instantiate(ResourceManager.Get.GetPrefab("EquipmentNode"));
                 g.GetComponent<Button>().onClick.AddListener(() => { g.GetComponent<EquipmentNode>().NodeClick(type, this,c); });
                 g.GetComponent<EquipmentNode>().type = etype;
+                g.transform.GetComponent<Image>().sprite=ResourceManager.Get.GetTexture(i.res + "_0");
+                SpriteState state = g.transform.GetComponent<Button>().spriteState;
+                state.highlightedSprite= ResourceManager.Get.GetTexture(i.res+"_1");
+                state.pressedSprite= ResourceManager.Get.GetTexture(i.res + "_1");
+                state.disabledSprite = ResourceManager.Get.GetTexture(i.res + "_0");
+                g.transform.GetComponent<Image>().color = c.GetColor();
+                g.transform.GetComponent<Button>().spriteState = state;
                 g.transform.SetParent(m_content.transform, false);
                 nowcontent.Add(g);
             }

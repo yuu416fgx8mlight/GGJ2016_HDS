@@ -26,6 +26,8 @@ public class EquipmentNode : MonoBehaviour {
         if (EquipmentType.Hand == type)
         {
             GameObject g=Instantiate(ResourceManager.Get.GetPrefab("Image"))as GameObject;
+           g.GetComponent<Image>().color = c;
+
             g.transform.SetParent(EquipmentPointSystem.Get.HandPoint,false);
         }
         if (EquipmentType.Lag == type)
