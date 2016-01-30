@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TitleButton : MonoBehaviour {
+public class ButtonManager : MonoBehaviour {
 
 	//2重呼び出し防止用フラグ
 	private bool SceneFrag;
@@ -27,6 +27,13 @@ public class TitleButton : MonoBehaviour {
 		if (!SceneFrag) {
 			SceneFrag = true;
 			FadeManager.Instance.LoadLevel ("Credit", 1.0f);
+		}
+	}
+
+	public void OnTitleClick(){
+		if (!SceneFrag) {
+			SceneFrag = true;
+			FadeManager.Instance.LoadLevel ("Title", 1.0f);
 		}
 	}
 }
