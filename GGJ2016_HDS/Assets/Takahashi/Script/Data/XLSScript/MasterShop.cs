@@ -17,6 +17,7 @@ public class MasterShop : ScriptableObject {
         public int category;
         public string res;
         public string color;
+        public int gread;
 
         public Color GetColor()
         {

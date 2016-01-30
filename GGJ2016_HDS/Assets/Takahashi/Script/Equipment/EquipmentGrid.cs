@@ -47,14 +47,14 @@ public class EquipmentGrid : MonoBehaviour {
             foreach (var i in Enum.GetValues(typeof(EquipmentType)))
             {
                 if ((EquipmentType)i == EquipmentType.None) return;
-                GameObject g = Instantiate(ResourceManager.Get.GetPrefab("EquipmentNode"));
+                GameObject g = Instantiate(GameManager.Get.Resource.GetPrefab("EquipmentNode"));
                 g.GetComponent<Button>().onClick.AddListener(() => { g.GetComponent<EquipmentNode>().NodeClick(type, this,null); });
                 g.GetComponent<EquipmentNode>().type = (EquipmentType)i;
-                g.transform.GetComponent<Image>().sprite = ResourceManager.Get.GetTexture(typeRes[(int)i] + "_0");
+                g.transform.GetComponent<Image>().sprite = GameManager.Get.Resource.GetTexture(typeRes[(int)i] + "_0");
                 SpriteState state = g.transform.GetComponent<Button>().spriteState;
-                state.highlightedSprite = ResourceManager.Get.GetTexture(typeRes[(int)i] + "_1");
-                state.pressedSprite = ResourceManager.Get.GetTexture(typeRes[(int)i] + "_1");
-                state.disabledSprite = ResourceManager.Get.GetTexture(typeRes[(int)i] + "_0");
+                state.highlightedSprite = GameManager.Get.Resource.GetTexture(typeRes[(int)i] + "_1");
+                state.pressedSprite = GameManager.Get.Resource.GetTexture(typeRes[(int)i] + "_1");
+                state.disabledSprite = GameManager.Get.Resource.GetTexture(typeRes[(int)i] + "_0");
                 g.transform.GetComponent<Button>().spriteState = state;
                 g.transform.SetParent(m_content.transform, false);
                 nowcontent.Add(g);
@@ -63,16 +63,16 @@ public class EquipmentGrid : MonoBehaviour {
         }
         if (type == EquipmentGridType.Item)
         {
-            GameObject returnbutton = Instantiate(ResourceManager.Get.GetPrefab("ReturnNode"));
+            GameObject returnbutton = Instantiate(GameManager.Get.Resource.GetPrefab("ReturnNode"));
             returnbutton.GetComponent<Button>().onClick.AddListener(() => {
                 ChangeGrid(EquipmentGridType.Category, EquipmentType.None);
                 nowtype = EquipmentGridType.Category;
             });
-            returnbutton.transform.GetComponent<Image>().sprite = ResourceManager.Get.GetTexture("back_0");
+            returnbutton.transform.GetComponent<Image>().sprite = GameManager.Get.Resource.GetTexture("back_0");
             SpriteState returnstate = returnbutton.transform.GetComponent<Button>().spriteState;
-            returnstate.highlightedSprite = ResourceManager.Get.GetTexture("back_1");
-            returnstate.pressedSprite = ResourceManager.Get.GetTexture("back_1");
-            returnstate.disabledSprite = ResourceManager.Get.GetTexture("back_0");
+            returnstate.highlightedSprite = GameManager.Get.Resource.GetTexture("back_1");
+            returnstate.pressedSprite = GameManager.Get.Resource.GetTexture("back_1");
+            returnstate.disabledSprite = GameManager.Get.Resource.GetTexture("back_0");
             returnbutton.transform.GetComponent<Button>().spriteState = returnstate;
             returnbutton.transform.SetParent(m_content.transform, false);
 
@@ -80,14 +80,14 @@ public class EquipmentGrid : MonoBehaviour {
             foreach (var i in m_equpiment[etype])
             {
                 MasterShop.param c = i;
-                GameObject g = Instantiate(ResourceManager.Get.GetPrefab("EquipmentNode"));
+                GameObject g = Instantiate(GameManager.Get.Resource.GetPrefab("EquipmentNode"));
                 g.GetComponent<Button>().onClick.AddListener(() => { g.GetComponent<EquipmentNode>().NodeClick(type, this,c); });
                 g.GetComponent<EquipmentNode>().type = etype;
-                g.transform.GetComponent<Image>().sprite=ResourceManager.Get.GetTexture(i.res + "_0");
+                g.transform.GetComponent<Image>().sprite= GameManager.Get.Resource.GetTexture(i.res + "_0");
                 SpriteState state = g.transform.GetComponent<Button>().spriteState;
-                state.highlightedSprite= ResourceManager.Get.GetTexture(i.res+"_1");
-                state.pressedSprite= ResourceManager.Get.GetTexture(i.res + "_1");
-                state.disabledSprite = ResourceManager.Get.GetTexture(i.res + "_0");
+                state.highlightedSprite= GameManager.Get.Resource.GetTexture(i.res+"_1");
+                state.pressedSprite= GameManager.Get.Resource.GetTexture(i.res + "_1");
+                state.disabledSprite = GameManager.Get.Resource.GetTexture(i.res + "_0");
                 g.transform.GetComponent<Image>().color = c.GetColor();
                 g.transform.GetComponent<Button>().spriteState = state;
                 g.transform.SetParent(m_content.transform, false);

@@ -41,6 +41,7 @@ public class SetMasterShop : AssetPostprocessor
                 p.category = (int)row.GetCell(6).NumericCellValue;
                 p.res = row.GetCell(7).StringCellValue;
                 p.color = row.GetCell(8).StringCellValue;
+                p.gread = (int)row.GetCell(9).NumericCellValue;
                 data.list.Add(p);
             }
 

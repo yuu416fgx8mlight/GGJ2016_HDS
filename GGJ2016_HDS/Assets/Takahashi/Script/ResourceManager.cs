@@ -56,11 +56,4 @@ public class ResourceManager : MonoBehaviour {
         LoadSprites();
         LoadPrefab();
     }
-    //とりあえずテスト用
-    public static ResourceManager Get;
-    void Awake()
-    {
-        Get = this;
-        Initialize();
-    }
 }

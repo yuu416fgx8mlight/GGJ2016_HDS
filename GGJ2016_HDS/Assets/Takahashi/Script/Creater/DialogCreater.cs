@@ -6,7 +6,7 @@ public class DialogCreater{
    public static void CreateShopDialog(
        Transform parent,MasterShop.param data,System.Action oncomplete=null,System.Action onremove=null)
     {
-        GameObject g=MonoBehaviour.Instantiate(ResourceManager.Get.GetPrefab("ShopDialog"));
+        GameObject g=MonoBehaviour.Instantiate(GameManager.Get.Resource.GetPrefab("ShopDialog"));
 
         string text = data.name + "は" + data.gold + "＄かかります。\n" + "購入しますか？";
         if (data.category == 0) text = "この卵を" + data.name + "ますか?";
@@ -33,7 +33,7 @@ public class DialogCreater{
 
 	public static void CollectionDialog(Transform parent,int id,string name,string subscription,int gold ){
 		int num = id + 1;
-		GameObject g=MonoBehaviour.Instantiate(ResourceManager.Get.GetPrefab("CollectionDialog"));
+		GameObject g=MonoBehaviour.Instantiate(GameManager.Get.Resource.GetPrefab("CollectionDialog"));
 		string maintext = "No." + num + " " + name;
 		string subtext = subscription+"\n売値: "+gold+"$";
 		g.transform.FindChild("maintext").GetComponent<Text>().text = maintext;

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WindowCreate {
     public static void CreateCharacterWindow(Transform parent)
     {
-        GameObject g = MonoBehaviour.Instantiate(ResourceManager.Get.GetPrefab("CharacterWindow"));
+        GameObject g = MonoBehaviour.Instantiate(GameManager.Get.Resource.GetPrefab("CharacterWindow"));
         g.transform.SetParent(parent,false);
         g.GetComponent<UIController>().Init();
     }

@@ -25,14 +25,14 @@ public class EquipmentNode : MonoBehaviour {
     {
         if (EquipmentType.Hand == type)
         {
-            GameObject g=Instantiate(ResourceManager.Get.GetPrefab("Image"))as GameObject;
+            GameObject g=Instantiate(GameManager.Get.Resource.GetPrefab("Image"))as GameObject;
            g.GetComponent<Image>().color = c;
 
             g.transform.SetParent(EquipmentPointSystem.Get.HandPoint,false);
         }
         if (EquipmentType.Lag == type)
         {
-            GameObject g = Instantiate(ResourceManager.Get.GetPrefab(res)) as GameObject;
+            GameObject g = Instantiate(GameManager.Get.Resource.GetPrefab(res)) as GameObject;
             g.transform.localScale = new Vector3(0, 1, 1);
             g.GetComponent<Image>().color = c;
             g.transform.SetParent(EquipmentPointSystem.Get.LagPiont, false);
@@ -41,7 +41,7 @@ public class EquipmentNode : MonoBehaviour {
         if (EquipmentType.Light == type)
         {
             //ライトの処理
-            GameObject g = Instantiate(ResourceManager.Get.GetPrefab(res)) as GameObject;
+            GameObject g = Instantiate(GameManager.Get.Resource.GetPrefab(res)) as GameObject;
             Vector2 pos = g.transform.localPosition;
             g.transform.localPosition = g.transform.localPosition + new Vector3(-200, 0,0);
             g.GetComponent<Image>().color = c;
