@@ -269,6 +269,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resource: {fileID: 0}
+  user:
+    characters: []
+    gold: 0
 --- !u!4 &206850166
 Transform:
   m_ObjectHideFlags: 0
@@ -293,8 +296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ea20bd8d7f218428de1ca63811ea75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScreenWidth: 1080
-  ScreenHeight: 1920
 --- !u!1 &449902066
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb7963423c56c045818dcbcbb8b97b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  user:
+    characters: []
+    gold: 0
 --- !u!1 &1615600753
 GameObject:
   m_ObjectHideFlags: 0

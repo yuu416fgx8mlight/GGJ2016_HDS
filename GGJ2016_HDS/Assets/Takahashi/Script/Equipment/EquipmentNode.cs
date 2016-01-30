@@ -19,15 +19,17 @@ public class EquipmentNode : MonoBehaviour {
             int category = data.category;
             DialogCreater.CreateShopDialog(CanvasList.Get.GetCanvas(CanvasType.FrontCanvas).point.transform,
                     data,()=> { SetEquipment((EquipmentType)data.category,data.res,data.GetColor()); });
+			
         }
     }
-    public void SetEquipment(EquipmentType type,string res,Color c)
+	public void SetEquipment(EquipmentType type,string res,Color c)
     {
-        if (EquipmentType.Hand == type)
-        {
+		
+		if (EquipmentType.Hand == type)
+		{
             GameObject g=Instantiate(GameManager.Get.Resource.GetPrefab("Image"))as GameObject;
+			this.gameObject.GetComponent<EquipmentNode> ().info.gread++;
            g.GetComponent<Image>().color = c;
-
             g.transform.SetParent(EquipmentPointSystem.Get.HandPoint,false);
         }
         if (EquipmentType.Lag == type)

@@ -31,7 +31,7 @@ public class ShipmentSC : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		transform.position += new Vector3 (0.1f, 0);
+	//	transform.position += new Vector3 (0.1f, 0);
 		if (this.isOutOfScreen()) {
 			if (miniChara != null) 
 				Instantiate (miniChara, InstantPosition.transform.position, miniChara.transform.rotation);

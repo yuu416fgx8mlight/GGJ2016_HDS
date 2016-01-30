@@ -61,10 +61,12 @@ public class EggStatus : MonoBehaviour {
 		if (i < 0) {
 			anime.SetTrigger ("BlueChange");
 			name = "BlueShake";
-		}
-		if (i > 0) {
+		} else if (i > 0) {
 			anime.SetTrigger ("RedChange");
 			name = "RedShake";
+		} else {
+			anime.SetTrigger ("White");
+			name = "Shake";
 		}
 
 		if (EggHP <= 0) {
