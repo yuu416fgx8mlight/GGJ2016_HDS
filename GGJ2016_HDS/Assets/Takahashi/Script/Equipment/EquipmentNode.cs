@@ -30,8 +30,11 @@ public class EquipmentNode : MonoBehaviour {
         }
         if (EquipmentType.Lag == type)
         {
-            GameObject g = Instantiate(ResourceManager.Get.GetPrefab("Image")) as GameObject;
+            GameObject g = Instantiate(ResourceManager.Get.GetPrefab(res)) as GameObject;
+            g.transform.localScale = new Vector3(0, 1, 1);
+            g.GetComponent<Image>().color = c;
             g.transform.SetParent(EquipmentPointSystem.Get.LagPiont, false);
+            LeanTween.scaleX(g, 1, 0.2f);
         }
         if (EquipmentType.Light == type)
         {

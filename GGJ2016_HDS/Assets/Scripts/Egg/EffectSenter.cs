@@ -6,7 +6,7 @@ public class EffectSenter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		GetComponent<ParticleRenderer> ().sortingLayerName = "Particle";
+		GetComponent<ParticleRenderer> ().sortingLayerName = "UICanvas";
 	}
 	
 	// Update is called once per frame

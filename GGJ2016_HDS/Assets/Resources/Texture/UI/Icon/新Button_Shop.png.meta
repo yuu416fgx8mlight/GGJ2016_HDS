@@ -1,0 +1,105 @@
+fileFormatVersion: 2
+guid: 05312d0f29094794a82fb7d4597305d1
+timeCreated: 1454144456
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "\u65B0Button_Shop_0"
+    21300002: "\u65B0Button_Shop_1"
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: "\u65B0Button_Shop_0"
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 11
+        width: 176
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 88, y: 57.5}
+        - {x: 88, y: 77.5}
+        - {x: 82, y: 86.5}
+        - {x: -54, y: 86.5}
+        - {x: -88, y: 83.5}
+        - {x: -88, y: -65.5}
+        - {x: -87, y: -77.5}
+        - {x: -79, y: -86.5}
+        - {x: 81, y: -86.5}
+        - {x: 88, y: -83.5}
+        - {x: 88, y: -60.5}
+        - {x: 77, y: -37.5}
+    - name: "\u65B0Button_Shop_1"
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 7
+        width: 184
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 83, y: -8.5}
+        - {x: 92, y: 52.5}
+        - {x: 92, y: 79.5}
+        - {x: 83, y: 90.5}
+        - {x: -47, y: 90.5}
+        - {x: -55, y: 89.5}
+        - {x: -89, y: 82.5}
+        - {x: -92, y: 78.5}
+        - {x: -92, y: -90.5}
+        - {x: 92, y: -90.5}
+        - {x: 92, y: -71.5}
+        - {x: 87, y: -62.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

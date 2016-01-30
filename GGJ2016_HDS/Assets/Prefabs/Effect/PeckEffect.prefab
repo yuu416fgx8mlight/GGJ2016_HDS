@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 406732}
   - 198: {fileID: 19858352}
   - 199: {fileID: 19901584}
+  - 114: {fileID: 11409498}
   m_Layer: 0
   m_Name: PeckEffect
   m_TagString: Untagged
@@ -43,6 +44,7 @@ GameObject:
   - 4: {fileID: 415902}
   - 198: {fileID: 19841188}
   - 199: {fileID: 19999382}
+  - 114: {fileID: 11444154}
   m_Layer: 0
   m_Name: PeckSub
   m_TagString: Untagged
@@ -88,6 +90,28 @@ Transform:
   - {fileID: 415902}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11409498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4aaabc1379aee42889f281ed13f40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11444154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4aaabc1379aee42889f281ed13f40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11490882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3121,7 +3145,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 522259671
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -3162,7 +3186,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 522259671
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -3189,6 +3213,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: InitialModule.startSize.scalar
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SortingLayerID
+      value: 522259671
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
