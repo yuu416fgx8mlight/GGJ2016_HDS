@@ -21,6 +21,5 @@ public class GameManager : MonoBehaviour {
             user = new User(new List<Character>(), 0);
         }
         SaveDataJsonUtility.Save<User>(user, "savedata");
-
     }
 }

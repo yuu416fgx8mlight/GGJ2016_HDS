@@ -65,6 +65,7 @@ public class EquipmentGrid : MonoBehaviour {
         {
             GameObject returnbutton = Instantiate(GameManager.Get.Resource.GetPrefab("ReturnNode"));
             returnbutton.GetComponent<Button>().onClick.AddListener(() => {
+				
                 ChangeGrid(EquipmentGridType.Category, EquipmentType.None);
                 nowtype = EquipmentGridType.Category;
             });

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MiniCharaDestroy : MonoBehaviour {
-	//AudioManager manager;
+public class testManager : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
 	
@@ -10,10 +10,9 @@ public class MiniCharaDestroy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("GOAL");
-	}
-	void Destroy(){
-		
-		Destroy (gameObject);
+		if (Input.GetKeyDown (KeyCode.Space)) { 
+			Sound.Instance.PlaySE ("okaneget");
+		}
+	
 	}
 }

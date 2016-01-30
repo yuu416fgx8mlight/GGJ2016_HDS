@@ -7,7 +7,7 @@ public class ResourceManager : MonoBehaviour {
     //スプライトデータを格納する場所
     private Dictionary<string, Sprite> Textures = new Dictionary<string, Sprite>();
     //AudioClipを格納する場所
-    //private Dictionary<string, AudioClip> Audios = new Dictionary<string, AudioClip>();
+    private Dictionary<string, AudioClip> Audios = new Dictionary<string, AudioClip>();
     //プレハブデータを格納する場所
     private Dictionary<string, GameObject> Prefabs = new Dictionary<string, GameObject>();
 
@@ -21,6 +21,12 @@ public class ResourceManager : MonoBehaviour {
         if (Textures.ContainsKey(name)) return Textures[name];
         return null;
     }
+
+	public AudioClip GetAudio(string name){
+		if (Audios.ContainsKey (name))return Audios [name];
+		return null;
+	}
+
     void LoadSprites()
     {
         Sprite[] e = Resources.LoadAll<Sprite>("Texture/UI/NodeIcon");
@@ -42,7 +48,9 @@ public class ResourceManager : MonoBehaviour {
         gs.Add(Resources.Load<GameObject>("Node/ReturnNode"));
 
         gs.Add(Resources.Load<GameObject>("Node/Image"));
-        GameObject[] g = Resources.LoadAll<GameObject>("Equipment");
+        
+
+		GameObject[] g = Resources.LoadAll<GameObject>("Equipment");
         foreach (var i in gs)
         {
             Prefabs.Add(i.name, i);
@@ -52,9 +60,23 @@ public class ResourceManager : MonoBehaviour {
             Prefabs.Add(i.name,i);
         }
     }
+
+	void LoadAudio(){
+		List<AudioClip> au = new List<AudioClip> ();
+
+		AudioClip[] a = Resources.LoadAll<AudioClip> ("Audios/SE");
+		AudioClip[] b = Resources.LoadAll<AudioClip> ("Audios/BGM");
+
+		foreach (var i in a) {
+			Audios.Add (i.name, i);
+		}
+
+	}
+
     public void Initialize()
     {
         LoadSprites();
         LoadPrefab();
+		LoadAudio ();
     }
 }
