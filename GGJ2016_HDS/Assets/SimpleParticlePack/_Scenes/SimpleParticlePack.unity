@@ -192,6 +192,46 @@ MonoBehaviour:
   flmBool: 0
   scrollPosition: {x: 0, y: 0}
   savedSystemType: 0
+--- !u!1 &139068999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 139069001}
+  - 114: {fileID: 139069000}
+  m_Layer: 0
+  m_Name: StrokeTest3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &139069000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 139068999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c63d5d83c80c44a8bd1150c02e28294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TouchEffect: {fileID: 107578, guid: 8a81bcbd7cf6f48b79aaa33c8f68ff26, type: 2}
+--- !u!4 &139069001
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 139068999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &238337902
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +307,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 577092930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.043611407, y: 0.01164943, z: 0.07516152}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -307,7 +347,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 812360363}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.043611407, y: 0.01164943, z: 0.07516152}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -347,7 +387,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1359028047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.043611407, y: 0.01164943, z: 0.07516152}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -367,7 +407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2014840576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c63d5d83c80c44a8bd1150c02e28294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TouchEffect: {fileID: 107578, guid: 8a81bcbd7cf6f48b79aaa33c8f68ff26, type: 2}
+  TouchEffect: {fileID: 194696, guid: 1ae927aead78247978ccc400f1460692, type: 2}
 --- !u!4 &2014840577
 Transform:
   m_ObjectHideFlags: 0
@@ -387,7 +427,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2014840575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.043611407, y: 0.01164943, z: 0.07516152}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
