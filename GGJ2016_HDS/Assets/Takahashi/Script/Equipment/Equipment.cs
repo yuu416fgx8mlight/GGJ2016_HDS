@@ -22,7 +22,7 @@ public class Equipment{
         this.heat = heat;
         this.stress = stress;
     }
-    public Equipment(MasterShop.Cell masterdata)
+    public Equipment(MasterShop.param masterdata)
     {
         //マスターデータから取得
     }

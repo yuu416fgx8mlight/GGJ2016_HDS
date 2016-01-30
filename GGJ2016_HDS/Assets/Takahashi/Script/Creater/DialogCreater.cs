@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class DialogCreater{
 
    public static void CreateShopDialog(
-       Transform parent,MasterShop.Cell data,System.Action oncomplete=null,System.Action onremove=null)
+       Transform parent,MasterShop.param data,System.Action oncomplete=null,System.Action onremove=null)
     {
         GameObject g=MonoBehaviour.Instantiate(ResourceManager.Get.GetPrefab("ShopDialog"));
 

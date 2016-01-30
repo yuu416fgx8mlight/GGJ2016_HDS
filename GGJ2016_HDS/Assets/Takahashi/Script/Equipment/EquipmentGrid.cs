@@ -10,7 +10,7 @@ public enum EquipmentGridType
 }
 public class EquipmentGrid : MonoBehaviour {
     private GameObject m_content;
-    private Dictionary<EquipmentType, List<MasterShop.Cell>> m_equpiment = new Dictionary<EquipmentType, List<MasterShop.Cell>>();
+    private Dictionary<EquipmentType, List<MasterShop.param>> m_equpiment = new Dictionary<EquipmentType, List<MasterShop.param>>();
     private EquipmentGridType nowtype;
     private List<GameObject> nowcontent = new List<GameObject>();
     void Start () {
@@ -20,7 +20,7 @@ public class EquipmentGrid : MonoBehaviour {
         //タイプ項目の作成
         foreach(var i in Enum.GetValues(typeof(EquipmentType)))
         {
-            m_equpiment.Add((EquipmentType)i, new List<MasterShop.Cell>());
+            m_equpiment.Add((EquipmentType)i, new List<MasterShop.param>());
         }
         foreach(var i in TestMaster.get.master.Shop.list)
         {
@@ -63,7 +63,7 @@ public class EquipmentGrid : MonoBehaviour {
             nowcontent.Add(returnbutton);
             foreach (var i in m_equpiment[etype])
             {
-                MasterShop.Cell c = i;
+                MasterShop.param c = i;
                 GameObject g = Instantiate(ResourceManager.Get.GetPrefab("EquipmentNode"));
                 g.GetComponent<Button>().onClick.AddListener(() => { g.GetComponent<EquipmentNode>().NodeClick(type, this,c); });
                 g.GetComponent<EquipmentNode>().type = etype;

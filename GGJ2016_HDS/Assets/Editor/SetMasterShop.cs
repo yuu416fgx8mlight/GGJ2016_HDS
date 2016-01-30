@@ -31,7 +31,7 @@ public class SetMasterShop : AssetPostprocessor
 
                 IRow row = sheet.GetRow(i);
                 //エクセルデータを編集したらこことMasterCharacterに追加すれば更新できるよ
-                MasterShop.Cell p = new MasterShop.Cell();
+                MasterShop.param p = new MasterShop.param();
                 p.id = (int)row.GetCell(0).NumericCellValue;
                 p.name = row.GetCell(1).StringCellValue;
                 p.subscripsion = row.GetCell(2).StringCellValue;

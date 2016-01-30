@@ -3,9 +3,9 @@ using System.Collections;
 using UnityEngine.EventSystems;
 public class EquipmentNode : MonoBehaviour {
     //とりあえずつかうときに使う
-    public MasterShop.Cell info;
+    public MasterShop.param info;
     public EquipmentType type;
-    public void NodeClick(EquipmentGridType type,EquipmentGrid grid,MasterShop.Cell data)
+    public void NodeClick(EquipmentGridType type,EquipmentGrid grid,MasterShop.param data)
     {
         if (type == EquipmentGridType.Category)
         {
