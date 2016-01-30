@@ -7,6 +7,7 @@ public class ShipmentSC : MonoBehaviour {
 	public GameObject InstantPosition;
 	private GameObject Ganerate;
 	public GameObject Egg;
+	public GameObject ShipSmoke;
 	//Margin
 	float margin = 1f; //マージン(画面外に出てどれくらい離れたら消えるか)を指定
 	float negativeMargin;
@@ -20,7 +21,9 @@ public class ShipmentSC : MonoBehaviour {
 		if (_setCamera == null) {
 			_setCamera = Camera.main;
 		}
-
+		/*ShipSmoke = (GameObject)Resources.Load ("Effect/Shipment");
+		Instantiate (ShipSmoke, gameObject.transform.position, Quaternion.identity);
+		ShipSmoke.transform.parent = transform;*/
 		negativeMargin = 0 - margin;
 		positiveMargin = 1 + margin;
 	}

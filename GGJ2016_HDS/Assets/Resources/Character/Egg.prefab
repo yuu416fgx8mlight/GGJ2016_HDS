@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11408426}
   m_Layer: 0
   m_Name: Egg
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,9 +96,8 @@ MonoBehaviour:
   EggLevel: 0
   Hot: 0
   Stres: 0
-  Egg: {fileID: 115374, guid: 4dedc1c228c407d41843a91915853f0c, type: 2}
-  BoilEgg: {fileID: 118268, guid: 73dae0de36336cf4bb56641a726ef0c3, type: 2}
   name: Character/Chicken
+  i: 0
 --- !u!114 &11412332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6f88bb14db24348a368529ec9f44d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoke: {fileID: 124120, guid: 5b8349fd903f648a4b3732fd3e25707b, type: 2}
 --- !u!212 &21205408
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -163,6 +163,14 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: smoke
+      value: 
+      objectReference: {fileID: 124120, guid: 5b8349fd903f648a4b3732fd3e25707b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 107142}
