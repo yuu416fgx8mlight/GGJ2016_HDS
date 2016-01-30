@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 113510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.21, y: -1.99, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,6 +44,7 @@ MonoBehaviour:
   miniChara: {fileID: 179188, guid: d0e714a71c1daf343a8813b6cea20ed4, type: 2}
   InstantPosition: {fileID: 0}
   Egg: {fileID: 107142, guid: 8f08f873ba2bce94ab3c346609b6157c, type: 2}
+  ShipSmoke: {fileID: 0}
 --- !u!212 &21204944
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -89,6 +90,14 @@ Prefab:
       propertyPath: miniChara
       value: 
       objectReference: {fileID: 179188, guid: d0e714a71c1daf343a8813b6cea20ed4, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 113510}

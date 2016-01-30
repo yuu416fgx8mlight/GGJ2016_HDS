@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class EggStatus : MonoBehaviour {
 	private int MaxHP;
 	public int EggHP=3;
@@ -10,7 +10,7 @@ public class EggStatus : MonoBehaviour {
 	private GameObject Egg;
 	private GameObject BoilEgg;
 	public string name;
-	private string[] ChickenList={"Chicken", "Pegasus", "Greffon"};
+	private string[] ChickenList={"Chicken", "Pegasus", "Greffon","Yatagarasu"};
 	private string[] ChickList={"Chick", "Pig", "Cow"};
 
 	public int i;
@@ -30,8 +30,9 @@ public class EggStatus : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		time += Time.deltaTime;
-
+		
+		MatSearch ();
+		LightSearch ();
 		i = Hot - Stres;
 		if (EggLevel == 1) {
 			if (i >= 1 && i <= 5) {
@@ -45,8 +46,10 @@ public class EggStatus : MonoBehaviour {
 			if (i >= 1 && i <= 5) {
 				j = 1;
 			}
-			if (i <= -1 ) {
+			if (i <= -1 && i >= -5) {
 				j = 2;
+			} else if(i<-5) {
+				j = 3;
 			}
 		}
 
@@ -89,5 +92,46 @@ public class EggStatus : MonoBehaviour {
 		EggLevel++;
 		anime.Play (name);
 		anime.SetInteger("WhiteShake",EggHP);
+	}
+		
+
+
+	void MatSearch(){
+		GameObject Mat= GameObject.Find ("Mat(Clone)");
+
+
+		if (Mat != null) {
+			
+			time += Time.deltaTime;
+			Color color=Mat.GetComponent<Image> ().color;
+			if (time >= 1) {
+				Stres += 1;
+				if (color == Color.blue) {
+					Stres += 2;
+				}
+				if (color == Color.red) {
+					Stres += 3;
+				}
+				time = 0;
+			}
+		}
+	}
+	void LightSearch(){
+		GameObject Light= GameObject.Find ("Light(Clone)");
+
+		if (Light != null) {
+			time += Time.deltaTime;
+			Color color=Light.GetComponent<Image> ().color;
+			if (time >= 1) {
+				Hot += 1;
+				if (color == Color.blue) {
+					Hot += 2;
+				}
+				if (color == Color.red) {
+					Hot += 3;
+				}
+				time = 0;
+			}
+		}
 	}
 }
