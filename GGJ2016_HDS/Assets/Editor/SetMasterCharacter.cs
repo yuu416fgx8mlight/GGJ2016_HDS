@@ -36,6 +36,10 @@ public class SetMasterCharacter : AssetPostprocessor
                 p.name = row.GetCell(1).StringCellValue;
                 p.subscripsion = row.GetCell(2).StringCellValue;
                 p.gold = (int)row.GetCell(3).NumericCellValue;
+                p.t_min =(int)row.GetCell(4).NumericCellValue;
+                p.t_max =(int)row.GetCell(5).NumericCellValue;
+                p.hs_min =(int)row.GetCell(6).NumericCellValue;
+                p.hs_max =(int)row.GetCell(7).NumericCellValue;
                 data.list.Add(p);
             }
 

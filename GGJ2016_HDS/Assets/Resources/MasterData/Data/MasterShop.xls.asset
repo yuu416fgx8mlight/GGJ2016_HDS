@@ -16,15 +16,31 @@ MonoBehaviour:
     name: "\u85C1"
     subscripsion: "\u85C1\u3067\u3059\u3002"
     gold: 1000
+    t_min: 0
+    t_max: 0
+    hs_min: 0
+    hs_max: 0
   - id: 1
     name: "\u5EA7\u5E03\u56E3"
     subscripsion: "\u5EA7\u5E03\u56E3\u3067\u3059\u3002"
     gold: 5000
+    t_min: 0
+    t_max: 0
+    hs_min: 0
+    hs_max: 0
   - id: 2
     name: "\u7FBD\u6BDB"
     subscripsion: "\u6BDB\u3067\u3059\u3002"
     gold: 10000
+    t_min: 0
+    t_max: 0
+    hs_min: 0
+    hs_max: 0
   - id: 3
     name: "\uFF29\uFF28\u30D2\u30FC\u30BF\u30FC"
     subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
     gold: 50000
+    t_min: 0
+    t_max: 0
+    hs_min: 0
+    hs_max: 0
