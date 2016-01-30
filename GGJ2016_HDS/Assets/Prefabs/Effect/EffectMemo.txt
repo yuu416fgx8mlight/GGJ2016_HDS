@@ -1,0 +1,11 @@
+MoneyEffect : 換金処理時のエフェクト
+PeckEffect : 「つつく」を行った時のエフェクト
+Shipment : 生まれたものが移動する時のエフェクト
+ShockWave : ボタンを押した時のエフェクト
+SmokeEffect : 新しい卵が降りてきた時のエフェクト
+StrokeEffect : 「撫でる」を行った時のエフェクト
+
+Script
+EffectDeleter : エフェクトを消すだけ
+Touch : ボタンを押したらエフェクトを生む
+StrokeEffect : 「撫でる」時にエフェクトをマウス位置に付き添わせる
