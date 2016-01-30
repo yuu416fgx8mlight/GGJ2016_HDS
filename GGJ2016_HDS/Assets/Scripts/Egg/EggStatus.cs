@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EggStatus : MonoBehaviour {
 	private int MaxHP;
-	private int EggHP=3;
+	public int EggHP=3;
 	public int EggLevel;
 	public int Hot=0;
 	public int Stres=0;
@@ -20,6 +20,7 @@ public class EggStatus : MonoBehaviour {
 	 Animator anime;
 	// Use this for initialization
 	void Start () {
+		name = "Shaking";
 		MaxHP = EggHP;
 		EggLevel = 0;
 		EggLevel = Mathf.Clamp (EggLevel, 0, 3);
@@ -36,10 +37,14 @@ public class EggStatus : MonoBehaviour {
 			MaxHP = EggHP;
 			anime.SetTrigger ("Break");
 		}
-		if (i < 0)
+		if (i < 0) {
 			anime.SetTrigger ("BlueChange");
-		if(i>0)
+			name = "BlueShake";
+		}
+		if (i > 0) {
 			anime.SetTrigger ("RedChange");
+			name = "RedShake";
+		}
 
 		if (EggHP <= 0) {
 			
@@ -70,5 +75,7 @@ public class EggStatus : MonoBehaviour {
 
 	void LevelUP(){
 		EggLevel++;
+		anime.Play (name);
+		anime.SetInteger("WhiteShake",EggHP);
 	}
 }

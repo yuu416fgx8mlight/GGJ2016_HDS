@@ -128,6 +128,10 @@ Prefab:
       propertyPath: m_Constraints
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11408426, guid: 8f08f873ba2bce94ab3c346609b6157c, type: 2}
+      propertyPath: EggHP
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f08f873ba2bce94ab3c346609b6157c, type: 2}
   m_IsPrefabParent: 0
@@ -355,7 +359,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1917858439}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17, y: 11.97, z: 0}
+  m_LocalPosition: {x: 0, y: 11.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -390,7 +394,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.16, y: 0.1}
 --- !u!212 &2078276780
 SpriteRenderer:
   m_ObjectHideFlags: 0
