@@ -40,3 +40,15 @@ Thumbs.db
 *.pyc #python bytecode cache, for some plugins.
 sysinfo.txt #Unity3D Generated File On Crash Reports
 GGJ2016_HDS/Assets/Plugins/LitJson/LitJson.dll.meta
+GGJ2016_HDS/Assets/Scripts/TitleManager.cs
+GGJ2016_HDS/Assets/Scripts/TitleManager.cs.meta
+GGJ2016_HDS/Assets/Resources/Texture/UI/Icon/Item_Mat.png
+GGJ2016_HDS/Assets/Resources/Texture/UI/Icon/Item_Mat.png.meta
+GGJ2016_HDS/Assets/Resources/Texture/UI/Icon/Item_Ramp.png
+GGJ2016_HDS/Assets/Resources/Texture/UI/Icon/Item_Ramp.png.meta
+GGJ2016_HDS/Assets/Animator_Animation/Title/Bird.anim
+GGJ2016_HDS/Assets/Animator_Animation/Title/Bird.anim.meta
+GGJ2016_HDS/Assets/Animator_Animation/Title/Bird.controller
+GGJ2016_HDS/Assets/Animator_Animation/Title/Bird.controller.meta
+GGJ2016_HDS/Assets/Images/Title/Bird.png
+GGJ2016_HDS/Assets/Images/Title/Bird.png.meta
