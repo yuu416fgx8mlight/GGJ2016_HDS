@@ -2,10 +2,13 @@
 using System.Collections;
 
 public class TestMaster : MonoBehaviour {
-    private Master master;
-    private User user;
+    public Master master;
+    public User user;
+    public static TestMaster get;
+
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+        get = this;
         master = new Master();
         user = SaveDataJsonUtility.Load<User>("savedata");
         master.LoadData();
@@ -13,6 +16,7 @@ public class TestMaster : MonoBehaviour {
         {
             Debug.Log(i.name);
         }
+        SaveDataJsonUtility.Save<User>(user,"savedata");
 	}
 	
 	// Update is called once per frame

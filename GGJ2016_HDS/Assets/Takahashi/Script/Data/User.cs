@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class User{
     public List<Character> Character = new List<Character>();
     public int gold;
-
     public User(List<Character> c,int gold)
     {
         Character = c;
