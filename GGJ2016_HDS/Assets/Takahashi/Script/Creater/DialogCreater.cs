@@ -30,4 +30,18 @@ public class DialogCreater{
         g.transform.SetParent(parent, false);
         g.GetComponent<UIController>().InitDialog();
     }
+
+	public static void CollectionDialog(Transform parent,int id,string name,string subscription,int gold ){
+		int num = id + 1;
+		GameObject g=MonoBehaviour.Instantiate(ResourceManager.Get.GetPrefab("CollectionDialog"));
+		string maintext = "No." + num + " " + name;
+		string subtext = subscription+"\n売値: "+gold+"$";
+		g.transform.FindChild("maintext").GetComponent<Text>().text = maintext;
+		g.transform.FindChild("subtext").GetComponent<Text>().text = subtext;
+		g.transform.SetParent(parent, false);
+		g.GetComponent<UIController>().InitDialog();
+		g.transform.FindChild("bt_exit").GetComponent<Button>().onClick.AddListener(()=>{
+			UIController.m_dialogController.RemoveDialog();
+		});
+	}
 }

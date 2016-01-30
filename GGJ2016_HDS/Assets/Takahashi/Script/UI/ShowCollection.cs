@@ -8,7 +8,8 @@ public class ShowCollection : MonoBehaviour {
 		for(int i=0;i<TestMaster.get.master.Characters.list.Count;i++){
 		GameObject obj = (GameObject)Instantiate(node);
 		GameObject parent = gameObject.transform.FindChild("ScrollView/Content").gameObject;
-		obj.transform.SetParent (parent.transform,false); 
+			obj.GetComponent<CollectionNode>().id = i;
+			obj.transform.SetParent (parent.transform,false); 
 		//obj.transform.parent = GameObject.Find("CharacterWindow/ScrollView/Content").gameObject.transform;
 		}
 	}
