@@ -39,6 +39,8 @@ public class SetMasterShop : AssetPostprocessor
                 p.hot = (int)row.GetCell(4).NumericCellValue;
                 p.stress = (int)row.GetCell(5).NumericCellValue;
                 p.category = (int)row.GetCell(6).NumericCellValue;
+                p.res = row.GetCell(7).StringCellValue;
+                p.color = row.GetCell(8).StringCellValue;
                 data.list.Add(p);
             }
 

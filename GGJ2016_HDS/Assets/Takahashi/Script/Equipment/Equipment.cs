@@ -5,25 +5,41 @@ public enum EquipmentType
     Hand=0,
     Light=1,
     Lag=2,
+    Drag=3,
     None
 }
-public class Equipment{
-    public EquipmentType type;
-    public string name;
-    public string subscripsion;
-    public int heat;
-    public int stress;
+public class Equipment:EquipmentController{
+    public EquipmentType type = EquipmentType.None;
 
-    public Equipment(EquipmentType type,string name,string subscription,int heat,int stress)
+    public void SetEquipmentType(EquipmentType type)
     {
         this.type = type;
-        this.name = name;
-        this.subscripsion = subscripsion;
-        this.heat = heat;
-        this.stress = stress;
     }
-    public Equipment(MasterShop.param masterdata)
+    public void SetController()
     {
-        //マスターデータから取得
+        switch (type)
+        {
+            case EquipmentType.Hand:
+                if (isHand) RemoveHand();
+                SetHand(gameObject);
+                break;
+            case EquipmentType.Light:
+                if (isLight) RemoveLight();
+                SetLight(gameObject);
+                break;
+            case EquipmentType.Lag:
+                if (isLag) RemoveLag();
+                SetLag(gameObject);
+                break;
+            case EquipmentType.Drag:
+                if (isDrag) RemoveDrag();
+                SetDrag(gameObject);
+                break;
+        }
     }
+    void Start()
+    {
+        SetController();
+    }
+
 }

@@ -22,11 +22,11 @@ public class ResourceManager : MonoBehaviour {
     }
     void LoadSprites()
     {
-        //Sprite[] e=Resources.LoadAll<Sprite>("Textures/Enemy");
-        //foreach(var i in e)
-        //{
-        //    Textures.Add(i.name, i);
-        //}
+        Sprite[] e = Resources.LoadAll<Sprite>("Texture/Equipment");
+        foreach (var i in e)
+        {
+            Textures.Add(i.name, i);
+        }
     }
 
     //内部リソースの読み込み
@@ -37,9 +37,16 @@ public class ResourceManager : MonoBehaviour {
         gs.Add(Resources.Load<GameObject>("Dialog/ShopDialog"));
         gs.Add(Resources.Load<GameObject>("Node/EquipmentNode"));
         gs.Add(Resources.Load<GameObject>("Node/ReturnNode"));
+
+        gs.Add(Resources.Load<GameObject>("Node/Image"));
+        GameObject[] g = Resources.LoadAll<GameObject>("Equipment");
         foreach (var i in gs)
         {
             Prefabs.Add(i.name, i);
+        }
+        foreach(var i in g)
+        {
+            Prefabs.Add(i.name,i);
         }
     }
     public void Initialize()
