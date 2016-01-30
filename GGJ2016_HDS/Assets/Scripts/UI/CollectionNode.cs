@@ -9,7 +9,8 @@ public class CollectionNode : MonoBehaviour {
 	[SerializeField] int gold;
 	// Use this for initialization
 	void Start () {
-		name = TestMaster.get.master.Characters.list[id].name;
+		//name = TestMaster.get.master.Characters.list[id].name;
+		name = GameManager.Get.user.characters[id].name;
 		subscribe = TestMaster.get.master.Characters.list [id].subscripsion;
 		gold = TestMaster.get.master.Characters.list [id].gold;
 	}
