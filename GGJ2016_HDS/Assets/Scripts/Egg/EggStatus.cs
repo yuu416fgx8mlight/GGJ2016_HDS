@@ -7,15 +7,14 @@ public class EggStatus : MonoBehaviour {
 	public int EggLevel;
 	public int Hot=0;
 	public int Stres=0;
-	public GameObject Egg;
-	public GameObject BoilEgg;
+	private GameObject Egg;
+	private GameObject BoilEgg;
 	public string name;
 	private string[] ChickenList={"Chicken", "Chicken", "Chicken"};
-	private string[] ChickList={"Chick", "Chick", "Chick"};
-	private string[] EggList={"Chicken", "bb", "ccc"};
+	private string[] ChickList={"Chick", "Pig", "Chick"};
 
-	private int i;
-
+	public int i;
+	private int j;
 	private float time;
 	 Animator anime;
 	// Use this for initialization
@@ -23,16 +22,24 @@ public class EggStatus : MonoBehaviour {
 		name = "Shaking";
 		MaxHP = EggHP;
 		EggLevel = 0;
-		EggLevel = Mathf.Clamp (EggLevel, 0, 3);
-		Mathf.Clamp (EggHP, 0, MaxHP);
 		anime = GetComponent<Animator> ();
+		BoilEgg=(GameObject)Resources.Load ("Character/yude_egg");
+		Egg = (GameObject)Resources.Load ("Character/nama_egg");
 		InvokeRepeating ("LevelUP",9,9);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		time += Time.deltaTime;
+
 		i = Hot - Stres;
+		if (EggLevel == 1) {
+			if (i >= 1 && i <= 5) {
+				j = 1;
+			}
+		}
+
+
 		if (EggHP<=MaxHP-1) {
 			MaxHP = EggHP;
 			anime.SetTrigger ("Break");
@@ -47,30 +54,24 @@ public class EggStatus : MonoBehaviour {
 		}
 
 		if (EggHP <= 0) {
-			
+			EggHP = 0;
 			if (EggLevel == 0) {
 				Instantiate (Egg,gameObject.transform.position, Quaternion.identity);
 				Destroy (gameObject);
-			}
-			if (EggLevel == 1) {
-				GameObject prefab = (GameObject)Resources.Load ("Character/" + ChickList[i]);
+			}else if (EggLevel == 1) {
+				GameObject prefab = (GameObject)Resources.Load ("Character/" + ChickList[j]);
 				Instantiate (prefab,gameObject.transform.position, Quaternion.identity);
 				Destroy (gameObject);
-			}
-			if (EggLevel == 2) {
-				GameObject prefab = (GameObject)Resources.Load ("Character/" + ChickenList[i]);
-				Instantiate (prefab, transform.position, transform.rotation);
+			}else if (EggLevel == 2) {
+				GameObject prefab = (GameObject)Resources.Load ("Character/" + ChickenList[j]);
+				Instantiate (prefab, gameObject.transform.position,Quaternion.identity);
 				Destroy (gameObject);
-			}
-			if (EggLevel >=3) {
+			}else{
 				Instantiate (BoilEgg,gameObject.transform.position, Quaternion.identity);
 				Destroy (gameObject);
 			}
 		}
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			EggHP--;
-		}
 	}
 
 	void LevelUP(){
