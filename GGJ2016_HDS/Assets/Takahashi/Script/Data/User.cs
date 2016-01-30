@@ -16,4 +16,8 @@ public class User{
         characters = c;
         this.gold = gold;
     }
+    public void AddGold(int gold)
+    {
+        this.gold += gold;
+    }
 }

@@ -49,6 +49,7 @@ public class EquipmentNode : MonoBehaviour {
             g.GetComponent<Image>().color = c;
             g.transform.SetParent(EquipmentPointSystem.Get.LightPoint, false);
             LeanTween.moveLocal(g, pos, 0.2f);
+
         }
     }
 
