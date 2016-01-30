@@ -9,6 +9,7 @@ public class DialogCreater{
         GameObject g=MonoBehaviour.Instantiate(ResourceManager.Get.GetPrefab("ShopDialog"));
 
         string text = data.name + "は" + data.gold + "＄かかります。\n" + "購入しますか？";
+        if (data.category == 0) text = "この卵を" + data.name + "ますか?";
         g.transform.FindChild("maintext").GetComponent<Text>().text = text;
         if (oncomplete != null)
         {

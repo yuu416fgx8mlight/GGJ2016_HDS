@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: GameCanvas
+    uniqueID: 981913049
+    locked: 0
+  - name: SubGameCanvas
+    uniqueID: 2289854697
+    locked: 0
+  - name: UIBackCanvas
+    uniqueID: 3417800445
+    locked: 0
+  - name: UICanvas
+    uniqueID: 522259671
+    locked: 0
+  - name: UIFrontCanvas
+    uniqueID: 2034528255
+    locked: 0
+  - name: FrontCanvas
+    uniqueID: 1684366809
+    locked: 0

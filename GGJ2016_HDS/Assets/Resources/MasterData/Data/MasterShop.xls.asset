@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 8
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -11,4 +11,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3437494d5ab62e419187eedb215424a, type: 3}
   m_Name: MasterShop.xls
   m_EditorClassIdentifier: 
-  list: []
+  list:
+  - id: 0
+    name: "\u64AB\u3067"
+    subscripsion: "\u85C1\u3067\u3059\u3002"
+    gold: 0
+    hot: 0
+    stress: 0
+    category: 0
+  - id: 1
+    name: "\u7A81\u304D"
+    subscripsion: "\u5EA7\u5E03\u56E3\u3067\u3059\u3002"
+    gold: 0
+    hot: 0
+    stress: 2
+    category: 0
+  - id: 2
+    name: "\u30E9\u30A4\u30C81"
+    subscripsion: "\u6BDB\u3067\u3059\u3002"
+    gold: 10000
+    hot: 1
+    stress: 0
+    category: 1
+  - id: 3
+    name: "\u30E9\u30A4\u30C82"
+    subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
+    gold: 50000
+    hot: 2
+    stress: 0
+    category: 1
+  - id: 4
+    name: "\u30E9\u30A4\u30C83"
+    subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
+    gold: 50001
+    hot: 3
+    stress: 0
+    category: 1
+  - id: 5
+    name: "\u6577\u72691"
+    subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
+    gold: 50002
+    hot: 0
+    stress: 1
+    category: 2
+  - id: 6
+    name: "\u6577\u72692"
+    subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
+    gold: 50003
+    hot: 0
+    stress: 3
+    category: 2
+  - id: 7
+    name: "\u6577\u72693"
+    subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
+    gold: 50004
+    hot: 0
+    stress: 5
+    category: 2
