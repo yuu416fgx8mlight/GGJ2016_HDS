@@ -14,5 +14,9 @@ public class MasterCharacter : ScriptableObject {
         public string subscripsion;
         public int gold;
         //その他のパラメータ
+        public int t_min;
+        public int t_max;
+        public int hs_min;
+        public int hs_max;
     }
 }
