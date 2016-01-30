@@ -10,12 +10,13 @@ public class ButtonUnlock : MonoBehaviour {
 	[SerializeField] bool locked = true;
 	[SerializeField] bool selected = false;
 	// Use this for initialization
+	Image thisImage;
 	void Start () {
+		thisImage = this.GetComponent<Image> ();
 		if (locked == true) {
+			thisImage.sprite = LockedImage;
 			GetComponent<Button>().interactable=false;
 		}
-
-
 	}
 	
 	// Update is called once per frame
@@ -25,6 +26,7 @@ public class ButtonUnlock : MonoBehaviour {
 
 	public void UnlockItem(){
 		this.GetComponent<Image> ().sprite = unlockedImage;
+		GetComponent<Button>().interactable=true;
 		locked = false;
 	}
 
@@ -45,5 +47,6 @@ public class ButtonUnlock : MonoBehaviour {
 			this.GetComponent<Image> ().sprite = unlockedImage;
 		}
 	}
+
 
 }
