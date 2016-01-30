@@ -10,6 +10,7 @@ public class ResourceManager : MonoBehaviour {
     //private Dictionary<string, AudioClip> Audios = new Dictionary<string, AudioClip>();
     //プレハブデータを格納する場所
     private Dictionary<string, GameObject> Prefabs = new Dictionary<string, GameObject>();
+
     public GameObject GetPrefab(string name)
     {
         if (Prefabs.ContainsKey(name)) return Prefabs[name];
@@ -22,7 +23,7 @@ public class ResourceManager : MonoBehaviour {
     }
     void LoadSprites()
     {
-        Sprite[] e = Resources.LoadAll<Sprite>("Texture/Equipment");
+        Sprite[] e = Resources.LoadAll<Sprite>("Texture/UI/NodeIcon");
         foreach (var i in e)
         {
             Textures.Add(i.name, i);

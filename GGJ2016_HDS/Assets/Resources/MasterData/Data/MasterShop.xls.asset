@@ -19,7 +19,7 @@ MonoBehaviour:
     hot: 0
     stress: 0
     category: 0
-    res: none
+    res: naderu
     color: white
   - id: 1
     name: "\u7A81\u304D"
@@ -28,7 +28,7 @@ MonoBehaviour:
     hot: 0
     stress: 2
     category: 0
-    res: none
+    res: tutuku
     color: white
   - id: 2
     name: "\u30E9\u30A4\u30C81"
@@ -46,8 +46,8 @@ MonoBehaviour:
     hot: 2
     stress: 0
     category: 1
-    res: Light
-    color: blue
+    res: Light2
+    color: white
   - id: 4
     name: "\u30E9\u30A4\u30C83"
     subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
@@ -55,8 +55,8 @@ MonoBehaviour:
     hot: 3
     stress: 0
     category: 1
-    res: Light
-    color: red
+    res: Light3
+    color: white
   - id: 5
     name: "\u6577\u72691"
     subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
@@ -73,8 +73,8 @@ MonoBehaviour:
     hot: 0
     stress: 3
     category: 2
-    res: Mat
-    color: blue
+    res: Mat2
+    color: white
   - id: 7
     name: "\u6577\u72693"
     subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
@@ -82,8 +82,8 @@ MonoBehaviour:
     hot: 0
     stress: 5
     category: 2
-    res: Mat
-    color: red
+    res: Mat3
+    color: white
   - id: 8
     name: "\u5371\u306A\u3044\u85AC"
     subscripsion: "\u3042\u305F\u304B\u3044"
@@ -92,4 +92,13 @@ MonoBehaviour:
     stress: 100
     category: 3
     res: none
+    color: white
+  - id: 9
+    name: "\u5272\u308A"
+    subscripsion: "\u5272\u308A\u307E\u3059\u3002"
+    gold: 0
+    hot: 0
+    stress: 0
+    category: 0
+    res: waru
     color: white

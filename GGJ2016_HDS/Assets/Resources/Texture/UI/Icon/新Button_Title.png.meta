@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 62c38a934aa8f3a4eb76db5e54377a47
-timeCreated: 1454144464
+timeCreated: 1454145794
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -55,49 +55,51 @@ TextureImporter:
     - name: "\u65B0Button_Title_0"
       rect:
         serializedVersion: 2
-        x: 13
-        y: 11
-        width: 176
-        height: 173
+        x: 0
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 88, y: 49.5}
-        - {x: 88, y: 78.5}
-        - {x: 81, y: 86.5}
-        - {x: 48, y: 86.5}
-        - {x: -88, y: 83.5}
-        - {x: -88, y: -64.5}
-        - {x: -87, y: -77.5}
-        - {x: -79, y: -86.5}
-        - {x: 81, y: -86.5}
-        - {x: 88, y: -83.5}
-        - {x: 88, y: -60.5}
-        - {x: 77, y: -37.5}
+      - - {x: 91, y: 60}
+        - {x: 91, y: 81}
+        - {x: 85, y: 86}
+        - {x: -14, y: 86}
+        - {x: -59, y: 82}
+        - {x: -89, y: 76}
+        - {x: -89, y: -38}
+        - {x: -85, y: -80}
+        - {x: -78, y: -91}
+        - {x: 91, y: -91}
+        - {x: 91, y: -34}
+        - {x: 82, y: 47}
     - name: "\u65B0Button_Title_1"
       rect:
         serializedVersion: 2
-        x: 207
-        y: 7
-        width: 186
-        height: 181
+        x: 200
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 83, y: 43.5}
-        - {x: 93, y: 55.5}
-        - {x: 93, y: 77.5}
-        - {x: 80, y: 90.5}
-        - {x: -93, y: 90.5}
-        - {x: -93, y: -52.5}
-        - {x: -90, y: -72.5}
-        - {x: -87, y: -87.5}
-        - {x: -77, y: -90.5}
-        - {x: 87, y: -90.5}
-        - {x: 93, y: -86.5}
-        - {x: 93, y: -8.5}
+      - - {x: 95, y: 47}
+        - {x: 95, y: 74}
+        - {x: 85, y: 90}
+        - {x: -39, y: 90}
+        - {x: -91, y: 85}
+        - {x: -95, y: 82}
+        - {x: -95, y: 58}
+        - {x: -85, y: 34}
+        - {x: -89, y: -84}
+        - {x: -72, y: -95}
+        - {x: 83, y: -95}
+        - {x: 95, y: -88}
+        - {x: 95, y: -70}
+        - {x: 86, y: -61}
     outline: []
   spritePackingTag: 
   userData: 
