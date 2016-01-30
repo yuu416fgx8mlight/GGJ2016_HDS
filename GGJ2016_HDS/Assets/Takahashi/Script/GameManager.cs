@@ -16,10 +16,9 @@ public class GameManager : MonoBehaviour {
         
         user = SaveDataJsonUtility.Load<User>("savedata");
         master.LoadData();
-        Debug.Log(user.Character[0].name);
         if(user== null)
         {
-            user = new User(null, 0);
+            user = new User(new List<Character>(), 0);
         }
         SaveDataJsonUtility.Save<User>(user, "savedata");
 

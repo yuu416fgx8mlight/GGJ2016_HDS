@@ -27,6 +27,7 @@ public class ResourceManager : MonoBehaviour {
         foreach (var i in e)
         {
             Textures.Add(i.name, i);
+            Debug.Log(i.name);
         }
     }
 
