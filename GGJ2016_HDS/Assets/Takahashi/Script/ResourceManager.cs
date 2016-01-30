@@ -36,6 +36,7 @@ public class ResourceManager : MonoBehaviour {
         List<GameObject> gs = new List<GameObject>();
         gs.Add(Resources.Load<GameObject>("Window/CharacterWindow"));
         gs.Add(Resources.Load<GameObject>("Dialog/ShopDialog"));
+		gs.Add(Resources.Load<GameObject>("Dialog/CollectionDialog"));
         gs.Add(Resources.Load<GameObject>("Node/EquipmentNode"));
         gs.Add(Resources.Load<GameObject>("Node/ReturnNode"));
 

@@ -10,7 +10,7 @@ public class EggStatus : MonoBehaviour {
 	private GameObject Egg;
 	private GameObject BoilEgg;
 	public string name;
-	private string[] ChickenList={"Chicken", "Pegasus", "Chicken"};
+	private string[] ChickenList={"Chicken", "Pegasus", "Greffon"};
 	private string[] ChickList={"Chick", "Pig", "Cow"};
 
 	public int i;
@@ -44,6 +44,9 @@ public class EggStatus : MonoBehaviour {
 		if (EggLevel == 2) {
 			if (i >= 1 && i <= 5) {
 				j = 1;
+			}
+			if (i <= -1 ) {
+				j = 2;
 			}
 		}
 

@@ -12,6 +12,7 @@ public class UIFooter : MonoBehaviour {
     }
     public void OnHome()
     {
+		Debug.Log (TestMaster.get.master.Characters.list[1].subscripsion);
 		Debug.Log (TestMaster.get.master.Characters.list.Count);
         if(UIController.m_nowController!=null)UIController.m_nowController.Remove();
         GridActive(true);
