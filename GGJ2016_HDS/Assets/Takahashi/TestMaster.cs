@@ -16,7 +16,6 @@ public class TestMaster : MonoBehaviour {
         {
             Debug.Log(i.name);
         }
-        SaveDataJsonUtility.Save<User>(user,"savedata");
 	}
 	
 	// Update is called once per frame

@@ -26,7 +26,7 @@ public class EquipmentGrid : MonoBehaviour {
         {
             m_equpiment.Add((EquipmentType)i, new List<MasterShop.param>());
         }
-        foreach(var i in TestMaster.get.master.Shop.list)
+        foreach(var i in GameManager.Get.master.Shop.list)
         {
             m_equpiment[(EquipmentType)i.category].Add(i);
         }

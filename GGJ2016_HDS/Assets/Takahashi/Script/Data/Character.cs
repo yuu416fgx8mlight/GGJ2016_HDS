@@ -2,6 +2,7 @@
 using System.Collections;
 
 //図鑑の情報
+[System.Serializable]
 public class Character{
     public int id;
     public string name;
