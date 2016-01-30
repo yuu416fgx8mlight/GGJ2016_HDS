@@ -16,14 +16,10 @@ public class GameManager : MonoBehaviour {
         
         user = SaveDataJsonUtility.Load<User>("savedata");
         master.LoadData();
-        //Debug.Log(user.Character[0].name);
         if(user== null)
         {
-			user = new User(new List<Character>(), 0);
+            user = new User(new List<Character>(), 0);
         }
-		//Debug.Log (user.characters [1].name);
-		//user.characters.Add (new Character(1,"hoge","hoheoh",100));
-		//Debug.Log(Application.persistentDataPath); 
         SaveDataJsonUtility.Save<User>(user, "savedata");
 
     }
