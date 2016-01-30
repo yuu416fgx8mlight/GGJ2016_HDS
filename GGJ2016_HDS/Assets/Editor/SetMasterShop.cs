@@ -14,7 +14,7 @@ public class SetMasterShop : AssetPostprocessor
     private static readonly string fileDir = "Assets/Resources/MasterData/MasterShop.xls";
 	private static readonly string exportDir = "Assets/Resources/MasterData/Data";
 
-	static void LoadMissionData(string path,MasterCharacter data)
+	static void LoadMissionData(string path,MasterShop data)
 	{
 		using (FileStream stream = File.Open(path, FileMode.Open, FileAccess.Read))
 		{
@@ -31,11 +31,14 @@ public class SetMasterShop : AssetPostprocessor
 
                 IRow row = sheet.GetRow(i);
                 //エクセルデータを編集したらこことMasterCharacterに追加すれば更新できるよ
-                MasterCharacter.Cell p = new MasterCharacter.Cell();
+                MasterShop.param p = new MasterShop.param();
                 p.id = (int)row.GetCell(0).NumericCellValue;
                 p.name = row.GetCell(1).StringCellValue;
                 p.subscripsion = row.GetCell(2).StringCellValue;
                 p.gold = (int)row.GetCell(3).NumericCellValue;
+                p.hot = (int)row.GetCell(4).NumericCellValue;
+                p.stress = (int)row.GetCell(5).NumericCellValue;
+                p.category = (int)row.GetCell(6).NumericCellValue;
                 data.list.Add(p);
             }
 
@@ -55,12 +58,12 @@ public class SetMasterShop : AssetPostprocessor
 
 			int idx = asset.LastIndexOf("/");
 			var assetpath = exportDir + asset.Substring(idx)+".asset";
-			MasterCharacter data = (MasterCharacter)AssetDatabase.LoadAssetAtPath(assetpath, typeof(MasterCharacter));
+            MasterShop data = (MasterShop)AssetDatabase.LoadAssetAtPath(assetpath, typeof(MasterShop));
 
 			//アセットがなければ作成
 			if (data == null)
 			{
-				data = ScriptableObject.CreateInstance<MasterCharacter>();
+				data = ScriptableObject.CreateInstance<MasterShop>();
 				AssetDatabase.CreateAsset((ScriptableObject)data, assetpath);
 				data.hideFlags = HideFlags.NotEditable;
 			}

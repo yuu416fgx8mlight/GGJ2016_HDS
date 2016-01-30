@@ -50,12 +50,14 @@ public static class UIAction{
     {
         LTRect cgrect = new LTRect();
         cgrect.alpha = cg.alpha;
+
         LTDescr d = LeanTween.alpha(cgrect, alpha, time).setEase(type);
         d.setOnUpdate((float f) => { UpdateAlpha(cg, cgrect.alpha); });
         if (complete != null)
         {
             d.setOnComplete(complete);
         }
+
     }
     public static void MoveActionY(CanvasGroup cg, float to, float alpha, float time, float alphatime = -1, LeanTweenType type = LeanTweenType.linear, Action complete = null)
     {

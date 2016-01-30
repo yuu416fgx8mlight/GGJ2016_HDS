@@ -20,8 +20,13 @@ public class StrokeEffect : MonoBehaviour {
 			ScreenToWorldPointPosition = Camera.main.ScreenToWorldPoint (MousePosition);
 			this.transform.position = ScreenToWorldPointPosition;
 		} else {
-			//なんか止められないのでゴリ押し
-			this.transform.position = new Vector3(1000,0,0);
+			//this.transform.position = new Vector3(1000,0,0);
+			StartCoroutine("MoveDestroy");
 		}
+	}
+
+	public IEnumerator MoveDestroy(){
+		yield return new WaitForSeconds (1f);
+		Destroy(gameObject);
 	}
 }

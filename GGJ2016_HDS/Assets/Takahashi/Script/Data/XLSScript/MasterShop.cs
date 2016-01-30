@@ -4,14 +4,17 @@ using System.Collections.Generic;
 
 public class MasterShop : ScriptableObject {
 
-    public List<Cell> list = new List<Cell>();
+    public List<param> list = new List<param>();
 	
 	[System.SerializableAttribute]
-	public class Cell
+	public class param
     {
         public int id;
         public string name;
         public string subscripsion;
         public int gold;
+        public int hot;
+        public int stress;
+        public int category;
     }
 }
