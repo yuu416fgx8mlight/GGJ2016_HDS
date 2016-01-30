@@ -17,7 +17,7 @@ public class Touch : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown (0)) {
 			TouchPosition = Input.mousePosition;
-			TouchPosition.z = 10f;
+			TouchPosition.z = 50f;
 			TouchWorldPointPosition = Camera.main.ScreenToWorldPoint (TouchPosition);
 			Instantiate (TouchEffect, TouchWorldPointPosition, Quaternion.identity);
 		}
