@@ -46,6 +46,7 @@ GameObject:
   - 224: {fileID: 22424704}
   - 225: {fileID: 22548204}
   - 114: {fileID: 11412948}
+  - 114: {fileID: 11425648}
   m_Layer: 5
   m_Name: CharacterWindow
   m_TagString: Untagged
@@ -138,6 +139,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &11425648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66c86a85a0eda420bb085d8da10d6696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  node: {fileID: 112708, guid: 59e6e1994e3a440fa86d1d80166d1ce3, type: 2}
 --- !u!114 &11428072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,15 +231,15 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 20
     m_Bottom: 0
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 90, y: 90}
-  m_Spacing: {x: 10, y: 10}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 15, y: 15}
+  m_Constraint: 1
+  m_ConstraintCount: 4
 --- !u!114 &11484974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,8 +252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 22426804}
-  m_Horizontal: 1
-  m_Vertical: 0
+  m_Horizontal: 0
+  m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
