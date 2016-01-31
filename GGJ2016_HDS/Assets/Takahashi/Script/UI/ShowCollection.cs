@@ -5,7 +5,7 @@ public class ShowCollection : MonoBehaviour {
 	[SerializeField] GameObject node;
 	// Use this for initialization
 	void Start () {
-		for(int i=0;i<TestMaster.get.master.Characters.list.Count;i++){
+		for(int i=0;i<GameManager.Get.user.characters.Count;i++){
 		GameObject obj = (GameObject)Instantiate(node);
 		GameObject parent = gameObject.transform.FindChild("ScrollView/Content").gameObject;
 			obj.GetComponent<CollectionNode>().id = i;

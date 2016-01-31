@@ -5,8 +5,20 @@ public class EquipmentController : MonoBehaviour {
 
     private static GameObject m_hand;
     private static GameObject m_ligth;
+    public static GameObject GetLight
+    {
+        get { return m_ligth; }
+    }
     private static GameObject m_lag;
+    public static GameObject GetLag
+    {
+        get { return m_lag; }
+    }
     private static GameObject m_drag;
+    public static GameObject GetDrag
+    {
+        get { return m_drag; }
+    }
     public bool isLight
     {
         get { return m_ligth != null; }

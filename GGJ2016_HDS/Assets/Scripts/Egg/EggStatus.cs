@@ -30,10 +30,8 @@ public class EggStatus : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		MatSearch ();
-		LightSearch ();
-		i = Hot - Stres;
+
+
 		if (EggLevel == 1) {
 			if (5 <= i) {
 				j = 2;
@@ -90,6 +88,10 @@ public class EggStatus : MonoBehaviour {
 			}
 		}
 
+		MatSearch ();
+		LightSearch ();
+		i = Hot - Stres;
+
 	}
 
 	void LevelUP(){
@@ -101,41 +103,21 @@ public class EggStatus : MonoBehaviour {
 
 
 	void MatSearch(){
-		GameObject Mat= GameObject.Find ("Mat(Clone)");
-
-
-		if (Mat != null) {
-			
 			time += Time.deltaTime;
-			Color color=Mat.GetComponent<Image> ().color;
 			if (time >= 1) {
-				Stres += 1;
-				if (color == Color.blue) {
-					Stres += 2;
-				}
-				if (color == Color.red) {
-					Stres += 3;
+				if (EquipmentController.GetLag != null) {
+				Stres+=EquipmentController.GetLag.GetComponent<Equipment> ().parametor.stress;
 				}
 				time = 0;
 			}
-		}
 	}
 	void LightSearch(){
-		GameObject Light= GameObject.Find ("Light(Clone)");
-
-		if (Light != null) {
 			time += Time.deltaTime;
-			Color color=Light.GetComponent<Image> ().color;
 			if (time >= 1) {
-				Hot += 1;
-				if (color == Color.blue) {
-					Hot += 2;
-				}
-				if (color == Color.red) {
-					Hot += 3;
+				if (EquipmentController.GetLight != null) {
+					Hot += EquipmentController.GetLight.GetComponent<Equipment> ().parametor.hot;
 				}
 				time = 0;
 			}
-		}
 	}
 }

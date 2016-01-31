@@ -10,10 +10,14 @@ public enum EquipmentType
 }
 public class Equipment:EquipmentController{
     public EquipmentType type = EquipmentType.None;
-
+    public MasterShop.param parametor;
     public void SetEquipmentType(EquipmentType type)
     {
         this.type = type;
+    }
+    public void SetParam(MasterShop.param p)
+    {
+        parametor = p;
     }
     public void SetController()
     {

@@ -11,6 +11,8 @@ public class ResourceManager : MonoBehaviour {
     //プレハブデータを格納する場所
     private Dictionary<string, GameObject> Prefabs = new Dictionary<string, GameObject>();
 
+	private Dictionary<string, Sprite> CharaIcons = new Dictionary<string, Sprite>();
+
     public GameObject GetPrefab(string name)
     {
         if (Prefabs.ContainsKey(name)) return Prefabs[name];
@@ -27,6 +29,12 @@ public class ResourceManager : MonoBehaviour {
 		return null;
 	}
 
+	public Sprite GetCharaIcon(string name)
+	{
+		if (CharaIcons.ContainsKey(name)) return CharaIcons[name];
+		return null;
+	}
+
     void LoadSprites()
     {
         Sprite[] e = Resources.LoadAll<Sprite>("Texture/UI/NodeIcon");
@@ -36,6 +44,16 @@ public class ResourceManager : MonoBehaviour {
             Debug.Log(i.name);
         }
     }
+
+	void LoadCharaIcons()
+	{
+		Sprite[] e = Resources.LoadAll<Sprite>("CharaIcon");
+		foreach (var i in e)
+		{
+			CharaIcons.Add(i.name, i);
+			//Debug.Log(i.name);
+		}
+	}
 
     //内部リソースの読み込み
     void LoadPrefab()
@@ -78,5 +96,6 @@ public class ResourceManager : MonoBehaviour {
         LoadSprites();
         LoadPrefab();
 		LoadAudio ();
+		LoadCharaIcons ();
     }
 }

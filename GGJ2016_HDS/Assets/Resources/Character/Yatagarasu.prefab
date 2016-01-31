@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 405574}
   - 212: {fileID: 21242370}
   - 114: {fileID: 11430572}
+  - 95: {fileID: 9536342}
   m_Layer: 0
   m_Name: Yatagarasu
   m_TagString: Untagged
@@ -29,6 +30,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!95 &9536342
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156660}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 797e4a466c3167a41b2a62c838c481ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11430572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,6 +108,10 @@ Prefab:
       propertyPath: miniChara
       value: 
       objectReference: {fileID: 105208, guid: 79a6a6cbf3a7bd7478d0ce71bb0adfba, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 797e4a466c3167a41b2a62c838c481ba, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 156660}

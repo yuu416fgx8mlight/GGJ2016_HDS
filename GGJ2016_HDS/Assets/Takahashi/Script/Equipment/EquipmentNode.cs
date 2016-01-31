@@ -8,15 +8,6 @@ public class EquipmentNode : MonoBehaviour {
     public MasterShop.param info;
     public EquipmentType type;
     public Transform equipparent;
-	private int i=0;
-	private int j=0;
-	private GameObject Player;
-	private void Start(){
-		Player = GameObject.FindWithTag ("Player");
-		InvokeRepeating ("Hot", 1, 1);
-		InvokeRepeating ("Stres", 1, 1);
-
-	}
 
     public void NodeClick(EquipmentGridType type,EquipmentGrid grid,MasterShop.param data)
 	{
@@ -44,13 +35,13 @@ public class EquipmentNode : MonoBehaviour {
             g.transform.SetParent(EquipmentPointSystem.Get.HandPoint,false);
 			switch(data.gread){
 			case 0://撫でる
-				Player.GetComponent<EggStatus>().Hot+=1;
+				GameObject.FindGameObjectWithTag("Player").GetComponent<EggStatus>().Hot+=1;
 				break;
 			case 1://つく
-				Player.GetComponent<EggStatus>().Stres+=1;
+				GameObject.FindGameObjectWithTag("Player").GetComponent<EggStatus>().Stres+=1;
 				break;
 			case 2://割る
-				Player.GetComponent<EggStatus>().EggHP-=1;
+				GameObject.FindGameObjectWithTag("Player").GetComponent<EggStatus>().EggHP-=1;
 				break;
 			}
         }
@@ -60,8 +51,9 @@ public class EquipmentNode : MonoBehaviour {
             g.transform.localScale = new Vector3(0, 1, 1);
             g.GetComponent<Image>().color = c;
             g.transform.SetParent(EquipmentPointSystem.Get.LagPiont, false);
+            g.GetComponent<Equipment>().SetParam(data);
             LeanTween.scaleX(g, 1, 0.2f);
-			i = data.hot;
+
         }
         if (EquipmentType.Light == type)
         {
@@ -71,14 +63,8 @@ public class EquipmentNode : MonoBehaviour {
             g.transform.localPosition = g.transform.localPosition + new Vector3(-200, 0,0);
             g.GetComponent<Image>().color = c;
             g.transform.SetParent(EquipmentPointSystem.Get.LightPoint, false);
+            g.GetComponent<Equipment>().SetParam(data);
             LeanTween.moveLocal(g, pos, 0.2f);
-			j = data.stress;
         }
     }
-	public void Hot(){
-		Player.GetComponent<EggStatus> ().Hot += i;
-	}
-	public void Stres(){
-		Player.GetComponent<EggStatus> ().Stres += j;
-	}
 }
