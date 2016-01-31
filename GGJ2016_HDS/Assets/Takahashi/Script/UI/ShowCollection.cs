@@ -6,11 +6,14 @@ public class ShowCollection : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		for(int i=0;i<GameManager.Get.master.Characters.list.Count;i++){
-		GameObject obj = (GameObject)Instantiate(node);
-		GameObject parent = gameObject.transform.FindChild("ScrollView/Content").gameObject;
+			GameObject obj = (GameObject)Instantiate(node);
+			GameObject parent = gameObject.transform.FindChild("ScrollView/Content").gameObject;
 			obj.GetComponent<CollectionNode>().id = i;
-			obj.transform.SetParent (parent.transform,false); 
-		//obj.transform.parent = GameObject.Find("CharacterWindow/ScrollView/Content").gameObject.transform;
+			obj.transform.SetParent (parent.transform,false);
+			if (GameManager.Get.user.complete == false) {
+				gameObject.transform.FindChild ("Complete").gameObject.SetActive (false);
+			}
+			//obj.transform.parent = GameObject.Find("CharacterWindow/ScrollView/Content").gameObject.transform;
 		}
 	}
 	

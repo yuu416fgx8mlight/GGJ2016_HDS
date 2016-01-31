@@ -31,18 +31,16 @@ public class EquipmentNode : MonoBehaviour {
 		
 		if (EquipmentType.Hand == type)
 		{
-			GameObject g=Instantiate(GameManager.Get.Resource.GetPrefab("Image"))as GameObject;
-			g.GetComponent<Image>().color = c;
-            g.transform.SetParent(EquipmentPointSystem.Get.HandPoint,false);
 			switch(data.gread){
 			case 0://撫でる
-				GameObject.FindGameObjectWithTag("Player").GetComponent<EggStatus>().Hot+=1;
+				GameObject.FindGameObjectWithTag("Player").GetComponent<EggStatus>().Hot+=data.hot;
 				break;
 			case 1://つく
-				GameObject.FindGameObjectWithTag("Player").GetComponent<EggStatus>().Stres+=1;
+				GameObject.FindGameObjectWithTag("Player").GetComponent<EggStatus>().Stres+=data.stress;
 				break;
 			case 2://割る
 				GameObject.FindGameObjectWithTag("Player").GetComponent<EggStatus>().EggHP-=1;
+                EffectCreater.CreateShockwave(EquipmentPointSystem.Get.HandPoint);
 				break;
 			}
         }
@@ -66,6 +64,14 @@ public class EquipmentNode : MonoBehaviour {
             g.transform.SetParent(EquipmentPointSystem.Get.LightPoint, false);
             g.GetComponent<Equipment>().SetParam(data);
             LeanTween.moveLocal(g, pos, 0.2f);
+        }
+        if(EquipmentType.Drag== type)
+        {
+            //ドラッグの処理
+            EggStatus states = GameObject.FindGameObjectWithTag("Player").GetComponent<EggStatus>();
+            EffectCreater.CreateStrokeEffect2(EquipmentPointSystem.Get.HandPoint);
+            states.Hot += data.hot;
+            states.Stres += data.stress;
         }
     }
 }

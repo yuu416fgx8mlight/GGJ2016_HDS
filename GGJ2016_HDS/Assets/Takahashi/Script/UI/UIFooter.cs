@@ -22,6 +22,7 @@ public class UIFooter : MonoBehaviour {
     }
     public void OnCredit()
     {
+		WindowCreate.CreateCredit (CanvasList.Get.GetCanvas (CanvasType.UIBackCanvas).point.transform);
         GridActive(false);
         CommonFile.push();
     }
