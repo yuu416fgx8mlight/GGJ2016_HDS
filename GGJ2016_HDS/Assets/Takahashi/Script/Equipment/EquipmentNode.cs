@@ -50,6 +50,7 @@ public class EquipmentNode : MonoBehaviour {
             g.transform.localScale = new Vector3(0, 1, 1);
             g.GetComponent<Image>().color = c;
             g.transform.SetParent(EquipmentPointSystem.Get.LagPiont, false);
+            g.GetComponent<Equipment>().SetParam(data);
             LeanTween.scaleX(g, 1, 0.2f);
         }
         if (EquipmentType.Light == type)
@@ -60,6 +61,7 @@ public class EquipmentNode : MonoBehaviour {
             g.transform.localPosition = g.transform.localPosition + new Vector3(-200, 0,0);
             g.GetComponent<Image>().color = c;
             g.transform.SetParent(EquipmentPointSystem.Get.LightPoint, false);
+            g.GetComponent<Equipment>().SetParam(data);
             LeanTween.moveLocal(g, pos, 0.2f);
 
         }
