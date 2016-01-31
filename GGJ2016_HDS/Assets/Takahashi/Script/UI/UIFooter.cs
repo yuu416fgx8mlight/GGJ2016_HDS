@@ -31,6 +31,12 @@ public class UIFooter : MonoBehaviour {
         GridActive(false);
         CommonFile.push();
     }
+    public void OnHelp()
+    {
+        WindowCreate.CreateHelp(CanvasList.Get.GetCanvas(CanvasType.UIBackCanvas).point.transform);
+        GridActive(false);
+        CommonFile.push();
+    }
 
     private void GridActive(bool flag)
     {

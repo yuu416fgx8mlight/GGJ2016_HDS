@@ -1794,6 +1794,34 @@ MonoBehaviour:
       name: nnnn
       subscripsion: 99
       gold: 50
+    - id: 0
+      name: nnnn
+      subscripsion: 99
+      gold: 50
+    - id: 0
+      name: nnnn
+      subscripsion: 99
+      gold: 50
+    - id: 0
+      name: nnnn
+      subscripsion: 99
+      gold: 50
+    - id: 0
+      name: nnnn
+      subscripsion: 99
+      gold: 50
+    - id: 0
+      name: nnnn
+      subscripsion: 99
+      gold: 50
+    - id: 0
+      name: nnnn
+      subscripsion: 99
+      gold: 50
+    - id: 0
+      name: nnnn
+      subscripsion: 99
+      gold: 50
     gold: 0
   goldtag: {fileID: 0}
 --- !u!4 &1179392099
@@ -3010,6 +3038,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 22442938, guid: fe5f4d66e7c930e46a693929d4ccf967, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe5f4d66e7c930e46a693929d4ccf967, type: 2}
   m_IsPrefabParent: 0
@@ -3581,10 +3613,6 @@ Prefab:
     - target: {fileID: 22429538, guid: 59e6e1994e3a440fa86d1d80166d1ce3, type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 112708, guid: 59e6e1994e3a440fa86d1d80166d1ce3, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59e6e1994e3a440fa86d1d80166d1ce3, type: 2}
