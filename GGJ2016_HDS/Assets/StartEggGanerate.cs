@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class StartEggGanerate : MonoBehaviour {
 	private GameObject egg;
 
@@ -12,6 +12,6 @@ public class StartEggGanerate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 }

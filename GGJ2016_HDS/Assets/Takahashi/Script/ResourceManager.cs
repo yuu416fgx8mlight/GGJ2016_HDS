@@ -13,6 +13,8 @@ public class ResourceManager : MonoBehaviour {
 
 	private Dictionary<string, Sprite> CharaIcons = new Dictionary<string, Sprite>();
 
+	private Dictionary<string,Sprite> Characters = new Dictionary<string,Sprite> ();
+
     public GameObject GetPrefab(string name)
     {
         if (Prefabs.ContainsKey(name)) return Prefabs[name];
@@ -52,6 +54,15 @@ public class ResourceManager : MonoBehaviour {
 		{
 			CharaIcons.Add(i.name, i);
 			//Debug.Log(i.name);
+		}
+
+	}
+
+	void LoadCharacters(){
+
+		Sprite[] c = Resources.LoadAll<Sprite> ("Character");
+		foreach (var i in c) {
+			Characters.Add (i.name, i);
 		}
 	}
 
@@ -106,5 +117,6 @@ public class ResourceManager : MonoBehaviour {
         LoadPrefab();
 		LoadAudio ();
 		LoadCharaIcons ();
+		LoadCharacters ();
     }
 }

@@ -4,6 +4,7 @@ using System.Collections;
 public class MiniCharaDestroy : MonoBehaviour {
 	//AudioManager manager;
 	// Use this for initialization
+	private int i;
 	void Start () {
 	
 	}
@@ -12,8 +13,14 @@ public class MiniCharaDestroy : MonoBehaviour {
 	void Update () {
 		Debug.Log ("GOAL");
 	}
+
+	public void SetEquipment(EquipmentType type,string res,Color c,MasterCharacter.Cell data)
+	{
+		i=data.gold;
+	}
+
 	void Destroy(){
-		
-		Destroy (gameObject);
+		GameManager.Get.AddGold (i);
+			Destroy (gameObject);
 	}
 }
