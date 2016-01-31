@@ -30,6 +30,7 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 
 		DontDestroyOnLoad (this.gameObject);
 
+		PlayBGM ("GGJ_TeamHDS_MainTheme",1.0f);
 
 	}
 
