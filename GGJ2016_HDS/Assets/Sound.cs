@@ -19,8 +19,7 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 	private bool _isFadeOut = false;
 
 	public AudioSource AttachBGMSource, AttachSESource;
-
-	private Dictionary<string, AudioClip> _bgmDic, _seDic;
+    
 
 	private void Awake ()
 	{
@@ -31,18 +30,7 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 
 		DontDestroyOnLoad (this.gameObject);
 
-		_bgmDic = new Dictionary<string, AudioClip> ();
-		_seDic  = new Dictionary<string, AudioClip> ();
 
-		object[] bgmList = Resources.LoadAll ("/Audios/BGM");
-		object[] seList  = Resources.LoadAll ("Audios");
-
-		foreach (AudioClip bgm in bgmList) {
-			_bgmDic [bgm.name] = bgm;
-		}
-		foreach (AudioClip se in seList) {
-			_seDic [se.name] = se;
-		}
 	}
 
 	private void Start ()
@@ -54,44 +42,32 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 
 	public void PlaySE (string seName, float delay = 0.0f)
 	{
-		if (!_seDic.ContainsKey (seName)) {
-			Debug.Log (seName + "という名前のSEがありません");
-			return;
-		}
-
+        AudioClip clip = GameManager.Get.Resource.GetAudio(seName);
+        if (clip == null) return;
 		_nextSEName = seName;
-		Invoke ("DelayPlaySE", delay);
-	}
-
-	private void DelayPlaySE ()
-	{
-		AttachSESource.PlayOneShot (_seDic [_nextSEName] as AudioClip);
+        AttachSESource.PlayOneShot(clip);
 	}
 
 
 	public void PlayBGM (string bgmName, float fadeSpeedRate = BGM_FADE_SPEED_RATE_HIGH)
 	{
-		if (!_bgmDic.ContainsKey (bgmName)) {
-			Debug.Log (bgmName + "という名前のBGMがありません");
-			return;
-		}
-
+        AudioClip clip = GameManager.Get.Resource.GetAudio(bgmName);
+        if (clip == null) return;
+        AttachBGMSource.clip = clip;
 		if (!AttachBGMSource.isPlaying) {
-			_nextBGMName = "";
-			AttachBGMSource.clip = _bgmDic [bgmName] as AudioClip;
 			AttachBGMSource.Play ();
 		}
 		else if (AttachBGMSource.clip.name != bgmName) {
 			_nextBGMName = bgmName;
-			FadeOutBGM (fadeSpeedRate);
-		}
+            _bgmFadeSpeedRate = fadeSpeedRate;
+            _isFadeOut = true;
+        }
 
 	}
 		
 	public void FadeOutBGM (float fadeSpeedRate = BGM_FADE_SPEED_RATE_LOW)
 	{
-		_bgmFadeSpeedRate = fadeSpeedRate;
-		_isFadeOut = true;
+
 	}
 
 	private void Update ()
@@ -107,7 +83,7 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 			_isFadeOut = false;
 
 			if (!string.IsNullOrEmpty (_nextBGMName)) {
-				PlayBGM (_nextBGMName);
+                PlayBGM(_nextBGMName);
 			}
 		}
 
