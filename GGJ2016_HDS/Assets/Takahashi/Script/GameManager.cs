@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour {
     }
     public void AddGold(int add)
     {
+        EffectCreater.CreateMoneyEffect3(goldtag.transform);
         StartCoroutine(GoldReal(user.gold, user.gold + add));
         user.AddGold(add);
         SaveDataJsonUtility.Save<User>(user,"savedata");
