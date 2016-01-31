@@ -30,43 +30,39 @@ public class GameManager : MonoBehaviour {
         goldtag = obj;
         goldtag.GetComponent<Text>().text = user.gold + "$";
     }
-    public void AddGold(int add)
+    public void AddGold(int add, bool animationflag = true)
     {
         EffectCreater.CreateMoneyEffect3(goldtag.transform);
         StartCoroutine(GoldReal(user.gold, user.gold + add));
         user.AddGold(add);
         SaveDataJsonUtility.Save<User>(user,"savedata");
     }
-    IEnumerator GoldReal(int nowgold,int nextgold)
+    IEnumerator GoldReal(int nowgold, int nextgold)
     {
-        LeanTween.scale(goldtag, new Vector3(1.2f, 1.2f, 1),0.3f);
+        LeanTween.scale(goldtag, new Vector3(1.2f, 1.2f, 1), 0.3f);
         //大体1秒
-        int add =(int)((nextgold - nowgold)/60);
+        int add = (int)((nextgold - nowgold) / 60);
         add = Mathf.Max(1, add);
         int count = 10;
-        while (nowgold<nextgold)
+        if (nextgold - nowgold < 0)
         {
-            count++;
-            nowgold += add;
-            if (nowgold > user.gold) nowgold = user.gold;
-            goldtag.GetComponent<Text>().text = nowgold + "$";
-            if (count > 10)
+            for (int i = 0; i < 60; ++i)
             {
-                count = 0;
-                CommonFile.getmoney();
+                count++;
+                nowgold += add;
+                if (nowgold > user.gold) nowgold = user.gold;
+                if (nowgold < user.gold) nowgold = user.gold;
+                goldtag.GetComponent<Text>().text = nowgold + "$";
+                if (count > 10)
+                {
+                    count = 0;
+                    CommonFile.getmoney();
+                }
+                yield return null;
             }
-            yield return null;
 
-
-        }
-        LeanTween.scale(goldtag, new Vector3(1, 1, 1),0.3f);
-        yield break;
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            AddGold(1000);
+            LeanTween.scale(goldtag, new Vector3(1, 1, 1), 0.3f);
+            yield break;
         }
     }
 

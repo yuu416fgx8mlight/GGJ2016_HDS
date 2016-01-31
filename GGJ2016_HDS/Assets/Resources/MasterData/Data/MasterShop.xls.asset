@@ -34,8 +34,8 @@ MonoBehaviour:
     gread: 1
   - id: 2
     name: "\u30E9\u30A4\u30C81"
-    subscripsion: "\u6BDB\u3067\u3059\u3002"
-    gold: 10000
+    subscripsion: "\u660E\u304B\u308A\u3067\u3042\u305F\u305F\u304B\u3044\u6C17\u304C\u3002"
+    gold: 500
     hot: 1
     stress: 0
     category: 1
@@ -45,7 +45,7 @@ MonoBehaviour:
   - id: 3
     name: "\u30E9\u30A4\u30C82"
     subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
-    gold: 50000
+    gold: 6000
     hot: 2
     stress: 0
     category: 1
@@ -54,8 +54,8 @@ MonoBehaviour:
     gread: 2
   - id: 4
     name: "\u30E9\u30A4\u30C83"
-    subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
-    gold: 50001
+    subscripsion: "\u3055\u3089\u306B\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
+    gold: 7500
     hot: 3
     stress: 0
     category: 1
@@ -64,8 +64,8 @@ MonoBehaviour:
     gread: 3
   - id: 5
     name: "\u6577\u72691"
-    subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
-    gold: 50002
+    subscripsion: "\u3075\u308F\u3075\u308F\u3067\u5B89\u5FC3\u3057\u307E\u3059\u3002"
+    gold: 2000
     hot: 0
     stress: 1
     category: 2
@@ -74,8 +74,8 @@ MonoBehaviour:
     gread: 1
   - id: 6
     name: "\u6577\u72692"
-    subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
-    gold: 50003
+    subscripsion: "\u3044\u3064\u307E\u3067\u3060\u3063\u3066\u5305\u307E\u308C\u305F\u3044\u3002"
+    gold: 5200
     hot: 0
     stress: 3
     category: 2
@@ -84,8 +84,8 @@ MonoBehaviour:
     gread: 2
   - id: 7
     name: "\u6577\u72693"
-    subscripsion: "\u3042\u3063\u305F\u304B\u3044\u3067\u3059\u3002"
-    gold: 50004
+    subscripsion: "\u89AA\u9CE5\u306E\u7FBD\u6BDB\u306E\u3088\u3046\u3067\u3059\u3002"
+    gold: 8000
     hot: 0
     stress: 5
     category: 2
@@ -94,10 +94,10 @@ MonoBehaviour:
     gread: 3
   - id: 8
     name: "\u5371\u306A\u3044\u85AC"
-    subscripsion: "\u3042\u305F\u304B\u3044"
-    gold: 4
-    hot: 100
-    stress: 100
+    subscripsion: "\u304A\u9AD8\u3044\u30A2\u30D6\u30CA\u30A4\u85AC"
+    gold: 70000
+    hot: -10000
+    stress: -100
     category: 3
     res: Drink
     color: white
@@ -111,4 +111,14 @@ MonoBehaviour:
     category: 0
     res: waru
     color: white
+    gread: 2
+  - id: 10
+    name: "\u3084\u3055\u3057\u3044\u85AC"
+    subscripsion: "\u5375\u306B\u3084\u3055\u3057\u3044\u85AC\u3067\u3059\u3002"
+    gold: 40000
+    hot: 10000
+    stress: -100
+    category: 3
+    res: Drink
+    color: blue
     gread: 2

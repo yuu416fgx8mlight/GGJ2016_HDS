@@ -20,7 +20,7 @@ public class DialogCreater{
 
             g.transform.FindChild("bt_ok").GetComponent<Button>().onClick.AddListener(() => {
                 if (oncomplete != null) oncomplete();
-                GameManager.Get.user.AddGold(-(data.gold));
+                GameManager.Get.AddGold(-(data.gold),false);
                 UIController.m_dialogController.RemoveDialog();
                 CommonFile.push();
             });

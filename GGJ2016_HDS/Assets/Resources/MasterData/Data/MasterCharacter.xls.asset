@@ -16,7 +16,7 @@ MonoBehaviour:
     name: "\u3086\u3067\u5375"
     subscripsion: "\u6E29\u3081\u305F\u3053\u3068\u3067\u304A\u3044\u3057\u305D\u3046\u306B\u3067\u304D\u305F\u3002"
     gold: 10
-    t_min: 20
+    t_min: 30
     t_max: 10000
     hs_min: 0
     hs_max: 0
@@ -39,9 +39,9 @@ MonoBehaviour:
   - id: 3
     name: "\u9D8F"
     subscripsion: "\u30D7\u30EC\u30DF\u30A2\u30E0\u30D5\u30A1\u30DF\u30C1\u30AD\uFF01\uFF01"
-    gold: 190
+    gold: 100
     t_min: 11
-    t_max: 19
+    t_max: 29
     hs_min: 0
     hs_max: 0
   - id: 4
@@ -49,62 +49,62 @@ MonoBehaviour:
     subscripsion: "\u307E\u308B\u307E\u308B\u3068\u80B2\u3063\u305F\u8C5A\u3002"
     gold: 120
     t_min: 1
-    t_max: 10
+    t_max: 29
     hs_min: 1
     hs_max: 5
   - id: 5
     name: "\u30E6\u30CB\u30B3\u30FC\u30F3"
     subscripsion: "\u51DB\u3005\u3057\u3044\u89D2\u304C\u7279\u5FB4\u3002"
-    gold: 240
+    gold: 400
     t_min: 1
-    t_max: 10
+    t_max: 29
     hs_min: 6
     hs_max: 10000
   - id: 6
     name: "\u725B"
     subscripsion: "\u305D\u308D\u305D\u308D\u98DF\u3079\u9803\u2026?"
-    gold: 120
+    gold: 160
     t_min: 1
-    t_max: 10
+    t_max: 29
     hs_min: -5
     hs_max: -1
   - id: 7
     name: "\u30B0\u30EA\u30D5\u30A9\u30F3"
     subscripsion: "\u66B4\u308C\u308B\u3068\u51F6\u66B4\u306A\u306E\u3067\u6CE8\u610F\uFF01"
-    gold: 240
+    gold: 340
     t_min: 1
-    t_max: 10
+    t_max: 29
     hs_min: -10000
     hs_max: -6
   - id: 8
     name: "\u30E4\u30BF\u30AC\u30E9\u30B9"
     subscripsion: "\u3044\u3064\u3082\u9060\u304F\u3092\u773A\u3081\u3066\u3044\u307E\u3059\u3002"
-    gold: 600
-    t_min: 11
-    t_max: 19
-    hs_min: 1
-    hs_max: 5
+    gold: 10000
+    t_min: 1
+    t_max: 29
+    hs_min: -10200
+    hs_max: -10000
   - id: 9
     name: "\u6731\u96C0"
     subscripsion: "\u8D64\u304F\u67D3\u307E\u3063\u305F\u7FBD\u306F\u9AD8\u5024\u3067\u58F2\u308C\u308B\u3068\u304B\u3002"
     gold: 600
     t_min: 11
-    t_max: 19
+    t_max: 29
     hs_min: 6
     hs_max: 10000
   - id: 10
     name: "\u30D0\u30B8\u30EA\u30B9\u30AF"
     subscripsion: "\u76EE\u3092\u5408\u308F\u305B\u308B\u3068\u77F3\u306B\u306A\u308A\u307E\u3059\u3002"
-    gold: 300
+    gold: 450
     t_min: 11
-    t_max: 19
+    t_max: 29
     hs_min: -5
     hs_max: -1
   - id: 11
     name: "\u30C9\u30E9\u30B4\u30F3"
     subscripsion: "\u708E\u3092\u5439\u304B\u308C\u306A\u3044\u3088\u3046\u512A\u3057\u304F\u3057\u307E\u3057\u3087\u3046\u3002"
-    gold: 600
+    gold: 1050
     t_min: 11
-    t_max: 19
+    t_max: 29
     hs_min: -10000
     hs_max: -6
