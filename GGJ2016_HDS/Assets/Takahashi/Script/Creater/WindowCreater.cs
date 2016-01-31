@@ -16,4 +16,10 @@ public class WindowCreate {
         g.transform.SetParent(parent, false);
         g.GetComponent<UIController>().Init();
     }
+	public static void CreateCredit(Transform parent)
+	{
+		GameObject g = MonoBehaviour.Instantiate(GameManager.Get.Resource.GetPrefab("CreditWindow"));
+		g.transform.SetParent(parent, false);
+		g.GetComponent<UIController>().Init();
+	}
 }

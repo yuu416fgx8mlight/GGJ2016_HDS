@@ -78,6 +78,7 @@ public class ResourceManager : MonoBehaviour {
 
         gs.Add(Resources.Load<GameObject>("Node/Image"));
         gs.Add(Resources.Load<GameObject>("Window/HelpWindow"));
+		gs.Add (Resources.Load<GameObject> ("Window/CreditWindow"));
 
 		GameObject[] g = Resources.LoadAll<GameObject>("Equipment");
         foreach (var i in gs)
