@@ -52,11 +52,4 @@ public class GameManager : MonoBehaviour {
         LeanTween.scale(goldtag, new Vector3(1, 1, 1),0.3f);
         yield break;
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            AddGold(1000);
-        }
-    }
 }
