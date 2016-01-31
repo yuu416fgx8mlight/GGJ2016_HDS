@@ -88,6 +88,10 @@ public class ResourceManager : MonoBehaviour {
 		foreach (var i in a) {
 			Audios.Add (i.name, i);
 		}
+        foreach(var i in b)
+        {
+            Audios.Add(i.name, i);
+        }
 
 	}
 

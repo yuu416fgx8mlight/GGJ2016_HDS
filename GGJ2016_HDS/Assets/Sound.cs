@@ -6,8 +6,13 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 
 
 
+<<<<<<< HEAD
 
 	protected static Sound instance;
+=======
+	public AudioSource AttachBGMSource, AttachSESource;
+    
+>>>>>>> a4c573256b6c30a10edb66c2b483466369a63c1d
 
 	public static Sound Instance
 	{
@@ -56,6 +61,7 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 			DontDestroyOnLoad(gameObject);
 		}
 
+<<<<<<< HEAD
 		// 全てのAudioSourceコンポーネントを追加する
 
 		// BGM AudioSource
@@ -72,6 +78,9 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 		for(int i = 0 ; i < VoiceSources.Length ; i++ ){
 			VoiceSources[i] = gameObject.AddComponent<AudioSource>();
 		}
+=======
+
+>>>>>>> a4c573256b6c30a10edb66c2b483466369a63c1d
 	}
 
 	void Update () {
@@ -79,6 +88,7 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 	}
 
 
+<<<<<<< HEAD
 
 	// ***** BGM再生 *****
 	// BGM再生
@@ -126,6 +136,36 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 			source.Stop();
 			source.clip = null;
 		}  
+=======
+	public void PlaySE (string seName, float delay = 0.0f)
+	{
+        AudioClip clip = GameManager.Get.Resource.GetAudio(seName);
+        if (clip == null) return;
+		_nextSEName = seName;
+        AttachSESource.PlayOneShot(clip);
+	}
+
+
+	public void PlayBGM (string bgmName, float fadeSpeedRate = BGM_FADE_SPEED_RATE_HIGH)
+	{
+        AudioClip clip = GameManager.Get.Resource.GetAudio(bgmName);
+        if (clip == null) return;
+        AttachBGMSource.clip = clip;
+		if (!AttachBGMSource.isPlaying) {
+			AttachBGMSource.Play ();
+		}
+		else if (AttachBGMSource.clip.name != bgmName) {
+			_nextBGMName = bgmName;
+            _bgmFadeSpeedRate = fadeSpeedRate;
+            _isFadeOut = true;
+        }
+
+	}
+		
+	public void FadeOutBGM (float fadeSpeedRate = BGM_FADE_SPEED_RATE_LOW)
+	{
+
+>>>>>>> a4c573256b6c30a10edb66c2b483466369a63c1d
 	}
 
 
@@ -135,12 +175,24 @@ public class Sound : SingletonMonoBehaviour<Sound> {
 		if( 0 > index || Voice.Length <= index ){
 			return;
 		}
+<<<<<<< HEAD
 		// 再生中で無いAudioSouceで鳴らす
 		foreach(AudioSource source in VoiceSources){
 			if( false == source.isPlaying ){
 				source.clip = Voice[index];
 				source.Play();
 				return;
+=======
+
+		AttachBGMSource.volume -= Time.deltaTime * _bgmFadeSpeedRate;
+		if (AttachBGMSource.volume <= 0) {
+			AttachBGMSource.Stop ();
+			AttachBGMSource.volume = PlayerPrefs.GetFloat (BGM_VOLUME_KEY, BGM_VOLUME_DEFULT);
+			_isFadeOut = false;
+
+			if (!string.IsNullOrEmpty (_nextBGMName)) {
+                PlayBGM(_nextBGMName);
+>>>>>>> a4c573256b6c30a10edb66c2b483466369a63c1d
 			}
 		} 
 	}
