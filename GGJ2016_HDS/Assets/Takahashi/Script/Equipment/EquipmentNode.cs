@@ -8,6 +8,16 @@ public class EquipmentNode : MonoBehaviour {
     public MasterShop.param info;
     public EquipmentType type;
     public Transform equipparent;
+	private int i=0;
+	private int j=0;
+	private GameObject Player;
+	private void Start(){
+		Player = GameObject.FindWithTag ("Player");
+		InvokeRepeating ("Hot", 1, 1);
+		InvokeRepeating ("Stres", 1, 1);
+
+	}
+
     public void NodeClick(EquipmentGridType type,EquipmentGrid grid,MasterShop.param data)
 	{
         if (type == EquipmentGridType.Category)
@@ -34,13 +44,13 @@ public class EquipmentNode : MonoBehaviour {
             g.transform.SetParent(EquipmentPointSystem.Get.HandPoint,false);
 			switch(data.gread){
 			case 0://撫でる
-				GameObject.FindWithTag("Player").GetComponent<EggStatus>().Hot+=1;
+				Player.GetComponent<EggStatus>().Hot+=1;
 				break;
 			case 1://つく
-				GameObject.FindWithTag("Player").GetComponent<EggStatus>().Stres+=1;
+				Player.GetComponent<EggStatus>().Stres+=1;
 				break;
 			case 2://割る
-				GameObject.FindWithTag("Player").GetComponent<EggStatus>().EggHP-=1;
+				Player.GetComponent<EggStatus>().EggHP-=1;
 				break;
 			}
         }
@@ -51,6 +61,7 @@ public class EquipmentNode : MonoBehaviour {
             g.GetComponent<Image>().color = c;
             g.transform.SetParent(EquipmentPointSystem.Get.LagPiont, false);
             LeanTween.scaleX(g, 1, 0.2f);
+			i = data.hot;
         }
         if (EquipmentType.Light == type)
         {
@@ -61,8 +72,13 @@ public class EquipmentNode : MonoBehaviour {
             g.GetComponent<Image>().color = c;
             g.transform.SetParent(EquipmentPointSystem.Get.LightPoint, false);
             LeanTween.moveLocal(g, pos, 0.2f);
-
+			j = data.stress;
         }
     }
-
+	public void Hot(){
+		Player.GetComponent<EggStatus> ().Hot += i;
+	}
+	public void Stres(){
+		Player.GetComponent<EggStatus> ().Stres += j;
+	}
 }
