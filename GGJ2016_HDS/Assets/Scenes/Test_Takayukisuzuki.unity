@@ -112,9 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65ae0cffd84c604788b0d41c10eea0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Max: 0
-  Low: 0
-  nametype: 0
 --- !u!4 &152063271
 Transform:
   m_ObjectHideFlags: 0
@@ -870,7 +867,7 @@ GameObject:
   - 222: {fileID: 1599129344}
   - 114: {fileID: 1599129343}
   m_Layer: 0
-  m_Name: "\u771FGame_Map"
+  m_Name: GameMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

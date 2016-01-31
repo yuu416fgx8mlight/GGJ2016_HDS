@@ -11,6 +11,9 @@ public class DialogCreater{
         string text = data.name + "は" + data.gold + "＄かかります。\n" + "購入しますか？";
         if (data.category == 0) text = "この卵を" + data.name + "ますか?";
         g.transform.FindChild("maintext").GetComponent<Text>().text = text;
+
+        if (GameManager.Get.user.gold < data.gold) g.transform.FindChild("bt_ok").GetComponent<Button>().interactable = false;
+
         if (oncomplete != null)
         {
             g.transform.FindChild("bt_ok").GetComponent<Button>().onClick.AddListener(() => {
@@ -18,8 +21,6 @@ public class DialogCreater{
                 UIController.m_dialogController.RemoveDialog();
                 CommonFile.push();
             });
-
-
         }
         else
         {
