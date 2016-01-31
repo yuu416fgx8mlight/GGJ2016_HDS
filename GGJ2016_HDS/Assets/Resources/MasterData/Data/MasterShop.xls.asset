@@ -99,7 +99,7 @@ MonoBehaviour:
     hot: 100
     stress: 100
     category: 3
-    res: none
+    res: Drink
     color: white
     gread: 1
   - id: 9

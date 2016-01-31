@@ -15,7 +15,7 @@ public class EquipmentGrid : MonoBehaviour {
     private List<GameObject> nowcontent = new List<GameObject>();
     private string[] typeRes =
     {
-        "tutuku","Light","Mat","Mat"
+        "tutuku","Light","Mat","Drink"
     };
     void Start () {
         nowtype = EquipmentGridType.Category;
