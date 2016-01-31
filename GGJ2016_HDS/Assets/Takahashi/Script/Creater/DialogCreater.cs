@@ -15,17 +15,25 @@ public class DialogCreater{
         {
             g.transform.FindChild("bt_ok").GetComponent<Button>().onClick.AddListener(() => {
                 oncomplete();
-                UIController.m_dialogController.RemoveDialog(); });
+                UIController.m_dialogController.RemoveDialog();
+                CommonFile.push();
+            });
+
+
         }
         else
         {
             g.transform.FindChild("bt_ok").GetComponent<Button>().onClick.AddListener(() => {
                 UIController.m_dialogController.RemoveDialog();
+
+                CommonFile.push();
             });
+
         }
         g.transform.FindChild("bt_no").GetComponent<Button>().onClick.AddListener(()=>{
             if (onremove != null) onremove();
             UIController.m_dialogController.RemoveDialog();
+            CommonFile.push();
         });
         g.transform.SetParent(parent, false);
         g.GetComponent<UIController>().InitDialog();

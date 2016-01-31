@@ -40,16 +40,33 @@ public class GameManager : MonoBehaviour {
     {
         LeanTween.scale(goldtag, new Vector3(1.2f, 1.2f, 1),0.3f);
         //大体1秒
-        int add =(int)((nextgold - nowgold) *Time.deltaTime);
+        int add =(int)((nextgold - nowgold)/60);
         add = Mathf.Max(1, add);
+        int count = 10;
         while (nowgold<nextgold)
         {
+            count++;
             nowgold += add;
             if (nowgold > user.gold) nowgold = user.gold;
             goldtag.GetComponent<Text>().text = nowgold + "$";
+            if (count > 10)
+            {
+                count = 0;
+                CommonFile.getmoney();
+            }
             yield return null;
+
+
         }
         LeanTween.scale(goldtag, new Vector3(1, 1, 1),0.3f);
         yield break;
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            AddGold(1000);
+        }
+    }
+
 }

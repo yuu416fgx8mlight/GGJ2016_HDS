@@ -9,7 +9,8 @@ public class EquipmentNode : MonoBehaviour {
     public EquipmentType type;
     public Transform equipparent;
     public void NodeClick(EquipmentGridType type,EquipmentGrid grid,MasterShop.param data)
-	{
+    {
+        CommonFile.push();
         if (type == EquipmentGridType.Category)
         {
 			grid.ChangeGrid(EquipmentGridType.Item,this.type);
