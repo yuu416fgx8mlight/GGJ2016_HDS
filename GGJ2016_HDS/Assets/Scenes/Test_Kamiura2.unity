@@ -1781,8 +1781,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Resource: {fileID: 0}
   user:
-    characters: []
+    characters:
+    - id: 1
+      name: nanana
+      subscripsion: kkk232
+      gold: 222
+    - id: 6
+      name: tttt
+      subscripsion: honoyoynoyo
+      gold: 100
+    - id: 0
+      name: nnnn
+      subscripsion: 99
+      gold: 50
     gold: 0
+  goldtag: {fileID: 0}
 --- !u!4 &1179392099
 Transform:
   m_ObjectHideFlags: 0
@@ -2260,6 +2273,10 @@ Prefab:
     - target: {fileID: 22468550, guid: 5adb49965bbff478f95951f9c681ad3a, type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 199828, guid: 5adb49965bbff478f95951f9c681ad3a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5adb49965bbff478f95951f9c681ad3a, type: 2}
@@ -3564,6 +3581,10 @@ Prefab:
     - target: {fileID: 22429538, guid: 59e6e1994e3a440fa86d1d80166d1ce3, type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 112708, guid: 59e6e1994e3a440fa86d1d80166d1ce3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59e6e1994e3a440fa86d1d80166d1ce3, type: 2}
