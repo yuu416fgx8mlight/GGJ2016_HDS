@@ -11,7 +11,7 @@ public class testManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Space)) { 
-			Sound.Instance.PlayBGM (0);
+			Sound.Instance.PlayBGM("GGJ_Title");
 		}
 	
 	}
