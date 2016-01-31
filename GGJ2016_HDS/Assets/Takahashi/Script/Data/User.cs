@@ -6,6 +6,7 @@ public class User{
     [SerializeField]
     public List<Character> characters = new List<Character>();
     public int gold;
+	public bool complete=false;
     public User(List<Character> c,int gold)
     {
         characters = c;
