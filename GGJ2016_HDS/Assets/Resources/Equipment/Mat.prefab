@@ -42,6 +42,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
+  parametor:
+    id: 0
+    name: 
+    subscripsion: 
+    gold: 0
+    hot: 0
+    stress: 0
+    category: 0
+    res: 
+    color: 
+    gread: 0
 --- !u!114 &11445088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +120,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
