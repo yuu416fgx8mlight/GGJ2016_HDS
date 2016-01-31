@@ -77,6 +77,11 @@ public class ResourceManager : MonoBehaviour {
         {
             Prefabs.Add(i.name,i);
         }
+        GameObject[] e = Resources.LoadAll<GameObject>("Effect");
+        foreach(var i in e)
+        {
+            Prefabs.Add(i.name, i);
+        }
     }
 
 	void LoadAudio(){

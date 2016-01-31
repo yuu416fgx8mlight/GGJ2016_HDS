@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 #region delegate
 public delegate void ControllFunc(System.Action func);
-
+public delegate void SoundFunc();
 #endregion
 public static class CommonFile{
     //FileNames
@@ -18,9 +18,11 @@ public static class CommonFile{
     public const int ScreenCenterY = 480;
 
     public const string canvas = "Canvas";
+    
+    public static readonly SoundFunc push = () => { Sound.Instance.PlaySE("button"); };
 
+    public static readonly SoundFunc getmoney = () => { Sound.Instance.PlaySE("okaneget"); };
 }
-
 public enum CanvasType
 {
     GameCanvas,

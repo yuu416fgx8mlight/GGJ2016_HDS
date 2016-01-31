@@ -182,6 +182,7 @@ GameObject:
   - 222: {fileID: 33287639}
   - 114: {fileID: 33287638}
   - 114: {fileID: 33287637}
+  - 225: {fileID: 33287640}
   m_Layer: 5
   m_Name: GoldTag
   m_TagString: Untagged
@@ -204,7 +205,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 433, y: 248}
+  m_AnchoredPosition: {x: 435, y: 245}
   m_SizeDelta: {x: 201, y: 29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &33287637
@@ -251,6 +252,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 33287635}
+--- !u!225 &33287640
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 33287635}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &38383056
 GameObject:
   m_ObjectHideFlags: 0
