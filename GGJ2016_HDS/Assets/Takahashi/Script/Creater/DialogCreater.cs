@@ -8,7 +8,7 @@ public class DialogCreater{
     {
         GameObject g=MonoBehaviour.Instantiate(GameManager.Get.Resource.GetPrefab("ShopDialog"));
 
-        string text = data.name + "は" + data.gold + "＄かかります。\n" + "購入しますか？";
+        string text = data.name + "は" + data.gold + "ゴールド"+"\n"+"かかります。\n" + "購入しますか？";
         if (data.category == 0) text = "この卵を" + data.name + "ますか?";
         g.transform.FindChild("maintext").GetComponent<Text>().text = text;
 
@@ -20,7 +20,7 @@ public class DialogCreater{
 
             g.transform.FindChild("bt_ok").GetComponent<Button>().onClick.AddListener(() => {
                 if (oncomplete != null) oncomplete();
-                GameManager.Get.AddGold(-(data.gold),false);
+                GameManager.Get.AddGold(-(data.gold));
                 UIController.m_dialogController.RemoveDialog();
                 CommonFile.push();
             });
