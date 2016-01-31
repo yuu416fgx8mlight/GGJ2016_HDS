@@ -95,7 +95,7 @@ MonoBehaviour:
   - id: 8
     name: "\u5371\u306A\u3044\u85AC"
     subscripsion: "\u3042\u305F\u304B\u3044"
-    gold: 2341234
+    gold: 4
     hot: 100
     stress: 100
     category: 3

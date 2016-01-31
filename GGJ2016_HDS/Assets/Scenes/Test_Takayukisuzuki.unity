@@ -155,6 +155,7 @@ MonoBehaviour:
   user:
     characters: []
     gold: 0
+    complete: 0
   goldtag: {fileID: 0}
 --- !u!4 &206850166
 Transform:
@@ -856,6 +857,7 @@ MonoBehaviour:
   user:
     characters: []
     gold: 0
+    complete: 0
 --- !u!1 &1599129341
 GameObject:
   m_ObjectHideFlags: 0

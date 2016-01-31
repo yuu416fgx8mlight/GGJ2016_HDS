@@ -22,6 +22,8 @@ public class UIController : MonoBehaviour {
    
     public void Init()
     {
+
+        transform.localPosition = new Vector2(CommonFile.ScreenWidth, 0);
         m_canvasGroup = GetComponent<CanvasGroup>();
         if (m_nowController != null)
         {
@@ -62,7 +64,6 @@ public class UIController : MonoBehaviour {
     }
     private void StartAction(Action func)
     {
-        transform.localPosition = new Vector2(CommonFile.ScreenWidth, 0);
         UIAction.MoveActionX(m_canvasGroup, 0, 1, 0.1f, 0.1f, LeanTweenType.linear, () => { func(); });
     }
     private void EndAction(Action func)

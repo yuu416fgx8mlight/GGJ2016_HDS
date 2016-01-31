@@ -12,26 +12,19 @@ public class DialogCreater{
         if (data.category == 0) text = "この卵を" + data.name + "ますか?";
         g.transform.FindChild("maintext").GetComponent<Text>().text = text;
 
-        if (GameManager.Get.user.gold < data.gold) g.transform.FindChild("bt_ok").GetComponent<Button>().interactable = false;
-
-        if (oncomplete != null)
+        if (GameManager.Get.user.gold < data.gold)
         {
+            g.transform.FindChild("bt_ok").GetComponent<Button>().transition = Selectable.Transition.ColorTint;
+            g.transform.FindChild("bt_ok").GetComponent<Button>().interactable = false;
+        }
+
             g.transform.FindChild("bt_ok").GetComponent<Button>().onClick.AddListener(() => {
-                oncomplete();
+                if (oncomplete != null) oncomplete();
+                GameManager.Get.user.AddGold(-(data.gold));
                 UIController.m_dialogController.RemoveDialog();
                 CommonFile.push();
             });
-        }
-        else
-        {
-            g.transform.FindChild("bt_ok").GetComponent<Button>().onClick.AddListener(() => {
-                UIController.m_dialogController.RemoveDialog();
-
-                CommonFile.push();
-            });
-
-        }
-        g.transform.FindChild("bt_no").GetComponent<Button>().onClick.AddListener(()=>{
+           g.transform.FindChild("bt_no").GetComponent<Button>().onClick.AddListener(()=>{
             if (onremove != null) onremove();
             UIController.m_dialogController.RemoveDialog();
             CommonFile.push();
