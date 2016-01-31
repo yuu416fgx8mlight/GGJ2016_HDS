@@ -58,6 +58,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d2689a23c7609499167e87b0ceddd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  user:
+    characters: []
+    gold: 0
+  chara:
+    id: 0
+    name: 
+    subscripsion: 
+    gold: 10000
+  id: 0
 --- !u!212 &21232570
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -127,6 +136,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: chara.gold
+      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
